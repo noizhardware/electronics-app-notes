@@ -1,0 +1,3 @@
+$ cat .gitattributes
+*.lbr linguist-detectable=true
+*.lbr linguist-language=html
