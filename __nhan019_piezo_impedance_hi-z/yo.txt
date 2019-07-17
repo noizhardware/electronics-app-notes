@@ -1,0 +1,5 @@
+﻿i files che iniziano con A e B fanno parte di due set diversi di test
+A piezo su chitarra classica
+B chitarra elettrica
+
+cmq alla fine il migliore è il seagull con TL082 in entrambe le applicazioni

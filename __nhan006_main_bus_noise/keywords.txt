@@ -1,0 +1,8 @@
+welsh
+bus
+noise
+antenna
+headphones
+main bus
+headphone bus
+pfl bus

@@ -1,0 +1,14 @@
+input
+output
+protection
+resistor
+470r
+1k
+cap
+ac
+dc
+coupling
+clip
+clipping
+100R
+1M

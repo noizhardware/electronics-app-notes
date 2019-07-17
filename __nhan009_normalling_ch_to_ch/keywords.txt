@@ -1,0 +1,9 @@
+normal
+normalling
+channel
+1m
+resistor
+stereo
+mono
+left
+right
