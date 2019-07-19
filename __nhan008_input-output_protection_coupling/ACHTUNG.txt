@@ -1,0 +1,8 @@
+﻿famo che per ora metto:
+
+* OUTPUT: una res 100R e bbaffanculo
+* INPUT: 1k + 1M e credo che la 1k vada messa DOPO il 1M, al contrario di come è mostrato in BHOinput.jpg
+  - vedi nishInput.jpg, con Nish avevo messo solo ac-blocking cap + 1M shunt
+
+
+* bhoooo.jpg mi sembra non abbia senso: perchè ho collegato un inverting opamp in quel punto del ciruito? che è poi da dove lo collego allo scope...bhoooo
