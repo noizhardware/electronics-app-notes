@@ -1,6 +1,6 @@
 ﻿famo che per ora metto:
 
-* OUTPUT: una res 100R e bbaffanculo
+* OUTPUT: una res 100R in serie appena prima del jack e bbaffanculo (vedi output.jpg)
 * INPUT: 1k + 1M e credo che la 1k vada messa DOPO il 1M, al contrario di come è mostrato in BHOinput.jpg
   - vedi nishInput.jpg, con Nish avevo messo solo ac-blocking cap + 1M shunt
 
