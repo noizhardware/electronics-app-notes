@@ -4,6 +4,7 @@
 * INPUT: 1k + 1M e credo che la 1k vada messa DOPO il 1M, al contrario di come è mostrato in BHOinput.jpg
   - vedi nishInput.jpg, con Nish avevo messo solo ac-blocking cap + 1M shunt
   - se proprio dovessi fare cose con AC-coupling nel input, devo rifare dei test
+  - cmq, la 1k è current-limiting, la 1M è pull-down, ovvero mette a massa quando non c'è collegato nulla
 
 
 * bhoooo.jpg mi sembra non abbia senso: perchè ho collegato un inverting opamp in quel punto del ciruito? che è poi da dove lo collego allo scope...bhoooo
