@@ -1,4 +1,4 @@
-### nhan002    <img src="/common/nhfull_tiny.png" alt="noizHARDWARE logo" width="30"/>
+### nhan002    <img src="../img/nhfull_tiny.png" alt="noizHARDWARE logo" width="30"/>
 
 # Headphones Driver
 
