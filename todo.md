@@ -1,4 +1,5 @@
  - mettere delle altre meta tags negli html, riferimenti che possono essere utili a me
  - cambiare la metatag "author"
  - creare un sistema di indicizzazione leggibile
- - creare un sistema di ricerca
+ - creare un sistema di ricerca // fuzzy?
+ - CC-SA-NC
