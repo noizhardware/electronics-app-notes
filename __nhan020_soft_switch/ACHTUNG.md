@@ -4,6 +4,8 @@
 
 * le due shunt-res da `10k` devono essere omesse in alcuni casi, perchè possono trasportare distorted bleedthru alla GND.
   + si puo fare che le lascio facoltative da montare
+  
+* ad esempio, col send-return volume pedal (MTX_pedal7_v_0_0)
 
 | //         | plain         | pedal               |
 |------------|---------------|---------------------|
