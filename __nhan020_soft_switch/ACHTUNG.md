@@ -13,3 +13,9 @@
 | 15v NO 10k | not 100% mute | `OK`                  |
 | 12v +10k   | `OK`            | distorted bleedthru |
 | 12v NO 10k | not 100% mute | `OK`                  |
+
+
+---
+####**TODO**
+  - same table for SPST version
+  - add notes from Meagher
