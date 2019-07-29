@@ -18,5 +18,7 @@
 ---
 ####**TODO**
   - ritestare il SPST con la shunt 10k PRIMA del vactrol!!!
+    - e prova anche con 47k
   - same table for SPST version
   - add notes from Meagher_7line
+  
