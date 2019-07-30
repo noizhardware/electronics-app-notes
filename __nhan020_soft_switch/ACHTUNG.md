@@ -1,5 +1,5 @@
 ﻿
-## __SPDT__
+## SPDT
 
 #### `OK` @ +/-15V
 #### @ +/-12V sembra ci sia un po di distorted bleedthru in alcuni casi
@@ -23,5 +23,6 @@
 
 ---
 ####**TODO**
+  - re-test `DPDT`
   - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
   
