@@ -21,5 +21,5 @@
     - e prova anche con 47k
   - same table for SPST version
   - add notes from Meagher_7line
-  - try H11F optocouplers (datasheet with appnote here in folder)
+  - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
   
