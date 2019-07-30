@@ -23,7 +23,7 @@
 
 ---
 
-####**TODO**
+#### **TODO**
   - re-test `DPDT`
   - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
   
