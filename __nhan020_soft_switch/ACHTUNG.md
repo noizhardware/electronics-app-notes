@@ -1,5 +1,6 @@
 ﻿
 ## SPDT
+###da rivedere - ritestare!!!!
 
 #### `OK` @ +/-15V
 #### @ +/-12V sembra ci sia un po di distorted bleedthru in alcuni casi
