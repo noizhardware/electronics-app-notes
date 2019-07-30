@@ -24,6 +24,6 @@
 ---
 
 #### TODO
-  - re-test `DPDT` alla luce delle nuove scoperte in spst
+  - re-test `SPDT` alla luce delle nuove scoperte in spst
   - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
   
