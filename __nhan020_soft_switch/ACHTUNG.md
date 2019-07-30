@@ -22,6 +22,7 @@
   * file meagher-SPST.jpg mostra un'ulteriore configurazione, embeddata in un mixer
 
 ---
+
 ####**TODO**
   - re-test `DPDT`
   - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
