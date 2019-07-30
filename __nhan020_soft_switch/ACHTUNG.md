@@ -27,4 +27,4 @@
 #### TODO
   - re-test `SPDT` alla luce delle nuove scoperte in spst
   - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
-  
+  - ingest audio for clickful/clickless audio comparison tests
