@@ -1,0 +1,62 @@
+h1 { font-family: "open sans", arial, helvetica, sans-serif; font-size: 14pt; font-weight: bold; text-align: center }
+h2 { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+h3 { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+li { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+ul { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+ol { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+td { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+th { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+p { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+textarea { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+input { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+
+table { border-collapse: collapse; }
+table.bottomBorder { border-collapse: collapse; }
+table.bottomBorder td, table.bottomBorder th { border-bottom: 1px solid black; padding: 10px; text-align: left; }
+
+A { color: #003399; text-decoration: none }
+A:visited { color: #003377 }
+A:active { color: #003399 }
+A:hover { color: #00cc00; text-decoration: underline }
+A.inline { color: #003399; text-decoration: underline }
+
+sub { font-family: "open sans", arial, helvetica, sans-serif; font-size: 8pt }
+sup { font-family: "open sans", arial, helvetica, sans-serif; font-size: 8pt }
+body { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt }
+
+.under { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt; text-decoration: underline }
+.tap { font-family: "open sans", arial, helvetica, sans-serif; font-size: 25pt; color: blue; font-weight: bold; }
+.hdrl { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt; color: white; font-weight: bold; }
+.hdrr { font-family: "open sans", arial, helvetica, sans-serif; font-size: 14pt; color: white; font-weight: bold; }
+
+.t-pic { font-family: "open sans", arial, helvetica, sans-serif; font-size: 11pt; font-weight: bold; text-align: center }
+.b-wht { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt; color: white; font-weight: bold; }
+.b-whts { font-family: "open sans", arial, helvetica, sans-serif; font-size: 11pt; color: white; font-weight: bold; }
+.t-wht { font-family: "open sans", arial, helvetica, sans-serif; font-size: 10pt; color: white; }
+.t-red { font-family: "open sans", arial, helvetica, sans-serif; font-size: 10pt; color: red; }
+.t-blu { font-family: "open sans", arial, helvetica, sans-serif; font-size: 10pt; color: blue; }
+.t-sml { font-family: "open sans", arial, helvetica, sans-serif; font-size: 8pt; }
+.t_8   { font-family: "open sans", arial, helvetica, sans-serif; font-size: 8pt; }
+.t_9   { font-family: "open sans", arial, helvetica, sans-serif; font-size: 9pt; }
+.t_8b  { font-family: "open sans", arial, helvetica, sans-serif; font-size: 8pt; font-weight: bold; }
+.t-med { font-family: "open sans", arial, helvetica, sans-serif; font-size: 9pt; }
+.t_12  { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt; }
+.t_12i  { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt; font-style: italic; }
+.t_12w { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt; color: white; }
+.t_12b { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt; font-weight: bold; }
+.t_13b { font-family: "open sans", arial, helvetica, sans-serif; font-size: 13pt; font-weight: bold; }
+.t_14b { font-family: "open sans", arial, helvetica, sans-serif; font-size: 14pt; font-weight: bold; }
+.t-11g { font-family: "open sans", arial, helvetica, sans-serif; font-size: 11pt; color: #252525 }
+.t-12g { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt; color: #252525 }
+.t_10  { font-family: "open sans", arial, helvetica, sans-serif; font-size: 10pt; }
+.t_10b { font-family: "open sans", arial, helvetica, sans-serif; font-size: 10pt; font-weight: bold; }
+.t_11  { font-family: "open sans", arial, helvetica, sans-serif; font-size: 11pt; }
+.t_11i  { font-family: "open sans", arial, helvetica, sans-serif; font-style: italic; font-size: 11pt; }
+.t_11b { font-family: "open sans", arial, helvetica, sans-serif; font-size: 11pt; font-weight: bold; }
+.t_red11  { font-family: "open sans", arial, helvetica, sans-serif; font-size: 11pt; color: red; }
+.t_red12  { font-family: "open sans", arial, helvetica, sans-serif; font-size: 12pt; color: red; }
+.footnote {font-family: "open sans", arial, helvetica, sans-serif; font-size: 10pt; color: gray; }
+.strike { text-decoration: line-through; }
+.under { text decoration: underline; }
+
+.li-sml { font-family: "open sans", arial, helvetica, sans-serif; font-size: 10pt; }
