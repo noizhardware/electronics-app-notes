@@ -1,6 +1,8 @@
 ﻿
-## `OK` @ +/-15V
-## @ +/-12V sembra ci sia un po di distorted bleedthru in alcuni casi
+## __SPDT__
+
+#### `OK` @ +/-15V
+#### @ +/-12V sembra ci sia un po di distorted bleedthru in alcuni casi
 
 * le due shunt-res da `10k` devono essere omesse in alcuni casi, perchè possono trasportare distorted bleedthru alla GND.
   + si puo fare che le lascio facoltative da montare
@@ -15,11 +17,11 @@
 | 12v NO 10k | not 100% mute | `OK`                  |
 
 
+## SPST
+  * file SPST.jpg mostra un po di configurazioni in cui funziona bene, testate
+  * file meagher-SPST.jpg mostra un'ulteriore configurazione, embeddata in un mixer
+
 ---
 ####**TODO**
-  - ritestare il SPST con la shunt 10k PRIMA del vactrol!!!
-    - e prova anche con 47k
-  - same table for SPST version
-  - add notes from Meagher_7line
   - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
   
