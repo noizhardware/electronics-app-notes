@@ -18,9 +18,9 @@
 
 
 ## SPST
-  * file SPST.jpg mostra un po di configurazioni in cui funziona bene, testate
-  * file meagher-SPST.jpg mostra un'ulteriore configurazione, embeddata in un mixer
-
+  * `SPST.jpg` mostra un po di configurazioni in cui funziona bene, testate
+  * `meagher-SPST.jpg` mostra un'ulteriore configurazione, embeddata in un mixer
+  * `SPST-bufferpost.jpg` è una versione con un solo vactrol, con pochissimo passthru **USE WITH CAUTION**
 ---
 
 #### TODO
