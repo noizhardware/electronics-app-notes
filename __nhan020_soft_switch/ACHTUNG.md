@@ -1,6 +1,7 @@
 ﻿
 ## SPDT
 ###da rivedere - ritestare!!!!
+- nella cartella `snd` ci sono due .wav che mostrano uno switching clickless VS clicky
 
 #### `OK` @ +/-15V
 #### @ +/-12V sembra ci sia un po di distorted bleedthru in alcuni casi
@@ -27,4 +28,3 @@
 #### TODO
   - re-test `SPDT` alla luce delle nuove scoperte in spst
   - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
-  - ingest audio for clickful/clickless audio comparison tests
