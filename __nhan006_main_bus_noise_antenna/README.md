@@ -11,4 +11,4 @@
   - se uso una resistenza troppo piccola è insensibile alle EMI, ma distorce il segnale
   - `47k` si è rivelato un ottimo candidato, zero distorsione, poca sensibilità alle EMI (non zero, purtroppo)
   
-  
+  - `betterbus-mixedresistors.jpg` posso usare le res da 47k anche dopo uno stage a 100k

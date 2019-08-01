@@ -1,0 +1,6 @@
+﻿switch
+vactrol
+soft
+noise
+click
+clickless
