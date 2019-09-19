@@ -1,6 +1,12 @@
 ﻿
 ## SPDT
-###da rivedere - ritestare!!!!
+### funziona, ma con le dovute riserve
+  * il pcb `MTX_pedal7_v_0_0` introduce armoniche nel segnale, quando lo switch è `ON`.
+  * con una sinewave da 5Vpk lo fà, de uso una sine da 1Vpk, non lo fa, ma c'è un transiente distorto quando flippo lo switch
+  * provo a rimettere le 10k shunts
+  * ascoltando nina simone, e switchando tra processed e unprocessed con un modulo di switch passivo, ho notato che distorce un po con i volumi alti
+  * provo a togliere di nuovo le 10k shunt
+  * **OK SENZA LE SHUNT!!!**
 - nella cartella `snd` ci sono due .wav che mostrano uno switching clickless VS clicky
 
 #### `OK` @ +/-15V
@@ -8,8 +14,7 @@
 
 * le due shunt-res da `10k` devono essere omesse in alcuni casi, perchè possono trasportare distorted bleedthru alla GND.
   + si puo fare che le lascio facoltative da montare
-  
-* ad esempio, col send-return volume pedal (MTX_pedal7_v_0_0)
+  + ad esempio, col send-return volume pedal (MTX_pedal7_v_0_0) sono facoltative
 
 | //         | plain         | pedal               |
 |------------|---------------|---------------------|
@@ -21,7 +26,7 @@
 
 ## SPST
   * `SPST.jpg` mostra un po di configurazioni in cui funziona bene, testate
-  * `meagher-SPST.jpg` mostra un'ulteriore configurazione, embeddata in un mixer
+  * `meagher-SPST.jpg` mostra un'ulteriore configurazione, embeddata in un mixer (poi non è davvero per Meagher, che necessita ti un SPDT)
   * `SPST-bufferpost.jpg` è una versione con un solo vactrol, con pochissimo passthru **USE WITH CAUTION**
 ---
 
