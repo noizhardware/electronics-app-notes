@@ -1,6 +1,7 @@
 ﻿
 ## SPDT
 ### funziona, ma con le dovute riserve
+#### in teoria la versione completa andrebbe fatta con 4 vactrol...
   * il pcb `MTX_pedal7_v_0_0` introduce armoniche nel segnale, quando lo switch è `ON`.
   * con una sinewave da 5Vpk lo fà, de uso una sine da 1Vpk, non lo fa, ma c'è un transiente distorto quando flippo lo switch
   * provo a rimettere le 10k shunts
@@ -23,6 +24,11 @@
 | 12v +10k   | `OK`            | distorted bleedthru |
 | 12v NO 10k | not 100% mute | `OK`                  |
 
+
+## SSPST v.2.0
+#### Soft Single Pole Single Throw
+  * vedi SSPST_v_2_0.jpg
+  * di base si puo prendere il SPST vecchio e semplicemente non bisogna mai mettere il gain prima dei vactrol, sempre DOPO!
 
 ## SPST
   * `SPST.jpg` mostra un po di configurazioni in cui funziona bene, testate
