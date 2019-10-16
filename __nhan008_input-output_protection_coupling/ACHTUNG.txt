@@ -1,7 +1,7 @@
-﻿famo che per ora metto:
+﻿current standard: (201910161510)
 
-* OUTPUT: una res 100R in serie appena prima del jack e bbaffanculo (vedi output.jpg)
-* INPUT: 1k + 1M e credo che la 1k vada messa DOPO il 1M, al contrario di come è mostrato in BHOinput.jpg
+* OUTPUT:  100R in series just before the output jack (see output.jpg) - short protection
+* INPUT: 1k + 1M , see INPUT.jpg
   - vedi nishInput.jpg, con Nish avevo messo solo ac-blocking cap + 1M shunt
   - se proprio dovessi fare cose con AC-coupling nel input, devo rifare dei test
   - cmq, la 1k è current-limiting, la 1M è pull-down, ovvero mette a massa quando non c'è collegato nulla
