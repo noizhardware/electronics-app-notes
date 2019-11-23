@@ -1,9 +1,0 @@
-headphones
-headphome
-amp
-amplifier
-pfl
-opa 2134
-tl 082
-bus
-burr-brown
