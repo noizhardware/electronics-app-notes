@@ -2,4 +2,5 @@
 
 Application notes, mostly for audio electronics
 
-* [nhan003](nhan003_opamptermination/nhan003.md): op-amp termination
+* [nhan002](__nhan002_headphonesdriver/nhan002.md): Headphones Driver
+* [nhan003](nhan003_opamptermination/nhan003.md): Unused op-amp termination
