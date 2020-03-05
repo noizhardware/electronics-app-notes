@@ -1,5 +1,6 @@
-# App Note nhan003
-## Unused Op-Amp termination
+# Unused Op-Amp termination
+###### App Note nhan003
+
 * `(-)` input and output tied together, `(+)` input to `GND`
 * see also : https://youtu.be/gwQiFuckMz0
 
