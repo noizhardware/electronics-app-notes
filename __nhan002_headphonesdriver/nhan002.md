@@ -3,7 +3,7 @@
 
 ## Main schematics:
 <img src="img/IMG_20190207_140413-3.png" alt="" width="80%"/>
-<img src="img/opa2134.jpg" alt="" width="80%"/>
+<img src="img/opa2134.png" alt="" width="80%"/>
 
 ## Other ideas:
 <img src="img/Scr20190919183230.jpg" alt="" width="80%"/>
