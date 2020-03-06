@@ -10,6 +10,11 @@
 <img src="img/Scr20190919203530.jpg" alt="" width="80%"/>
 <img src="img/yousynth-headphones.gif" alt="" width="80%"/>
 
+---
+<center>
+     <a href="../README.md">
+          <img src="../img/nhfavico_black.png" alt="noizHARDWARE logo" width="20"/></center></a>
+
 <!--
 
 ,,headphones

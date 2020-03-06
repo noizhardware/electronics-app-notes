@@ -6,6 +6,10 @@
 
 <img src="img/Scr20190216134025.jpg" alt="unused op-amp termination schematic" width="80%"/>
 
+---
+<center>
+     <a href="../README.md">
+          <img src="../img/nhfavico_black.png" alt="noizHARDWARE logo" width="20"/></center></a>
 
 <!--
 
