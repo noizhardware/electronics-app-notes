@@ -2,7 +2,7 @@
 ###### App Note nhan002
 
 ## Main schematics:
-<img src="img/IMG_20190207_140413.jpg" alt="" width="80%"/>
+<img src="img/IMG_20190207_140413-3.png" alt="" width="80%"/>
 <img src="img/opa2134.jpg" alt="" width="80%"/>
 
 ## Other ideas:
