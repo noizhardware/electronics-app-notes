@@ -4,6 +4,7 @@ Application notes, mostly for audio electronics
 
 * [nhan002](nhan002/nhan002.md): Headphones Driver
 * [nhan003](nhan003/nhan003.md): Unused op-amp termination
+* [nhan025](nhan024/nhan024.md): Utilities
 * [nhan025](nhan025/nhan025.md): Varigain
 
 <!--
