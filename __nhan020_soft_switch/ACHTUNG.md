@@ -1,4 +1,6 @@
-﻿
+## henrik
+il più semplice, piu promettente per ora, da testare in production
+
 ## SPDT
 ### funziona, ma con le dovute riserve
 #### in teoria la versione completa andrebbe fatta con 4 vactrol... **vedi 4vactrolz.jpg**
