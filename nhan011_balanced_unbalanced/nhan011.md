@@ -1,7 +1,7 @@
 # Balanced and Unbalanced
 ###### App Note nhan011
 
-## Bsic functioning of balanced audio transmission
+## Basic functioning of balanced audio signal transmission
 <img src="img/basic.png" alt="" width="80%"/>
 
 ## `Unbalanced out` >> `Balanced in`
