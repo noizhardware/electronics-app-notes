@@ -9,6 +9,9 @@ On the left the original version, on the right the final version, can drive a si
 
 For stereo headphones, use 2 separated copies. Use opa4134, quad version of the 2134
 
+The `non-bus` resistor is to be used when you have a single source coming in.
+If the source is a bus, each element of the bus should have their own 100k summing resistor.
+
 ## Other ideas:
 <img src="img/ysr-v00.png" alt="ysr-v00" width="80%"/>
 Adapted version from Yousynth. At the core of kiku_00
