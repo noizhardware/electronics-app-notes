@@ -1,9 +1,11 @@
 # Headphones Driver
 ###### App Note nhan002
 
-## Main schematics:
-<img src="img/IMG_20190207_140413-3.png" alt="" width="80%"/>
-<img src="img/opa2134.png" alt="" width="80%"/>
+## Main schematic:
+<img src="img/hp-v10.png" alt="" width="80%"/>
+On the left the original version, on the right the final version, can drive a single channel or two channels in parallel.
+100n cap to block unwanted DC, for once :D
+For stereo headphones, use 2 separated copies. Use opa4134, quad version of the 2134
 
 ## Other ideas:
 <img src="img/Scr20190919183230.jpg" alt="" width="80%"/>
