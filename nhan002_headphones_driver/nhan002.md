@@ -12,6 +12,12 @@ For stereo headphones, use 2 separated copies. Use opa4134, quad version of the 
 The `non-bus` resistor is to be used when you have a single source coming in.
 If the source is a bus, each element of the bus should have their own 100k summing resistor.
 
+<img src="img/opa-final-stage.png" alt="2020f01" width="80%"/>
+Can also be used as a final stage after others using eg. TL07x's.
+The final opa2134 provides the correct drive and impedance matching
+Can also be used as a general-purpose exit stage, providing compatibility with headphones _and_ line out.
+**ACHTUNG** the previous design is **inverting**, act accordingly if you're using it as a general-purpose exit stage.
+
 ## Other ideas:
 <img src="img/ysr-v00.png" alt="ysr-v00" width="80%"/>
 Adapted version from Yousynth. At the core of kiku_00
