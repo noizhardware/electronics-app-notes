@@ -38,6 +38,9 @@ Still to be properly tested, will probably be ditched in favor of the simpler op
 ,,amplifier
 ,,pfl
 ,,opa 2134
+,,opa2134
+,,opa 4134
+,,opa4134
 ,,tl 082
 ,,tl082
 ,,082
