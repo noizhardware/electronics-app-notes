@@ -14,6 +14,7 @@ If the source is a bus, each element of the bus should have their own 100k summi
 
 ### as output stage:
 <img src="img/opa-final-stage.png" alt="2020f01" width="80%"/>
+
 Can also be used as output stage after others using eg. TL07x's.
 The final opa2134 provides the correct drive and impedance matching
 Can also be used as a general-purpose output stage, providing compatibility with headphones _and_ line out.
