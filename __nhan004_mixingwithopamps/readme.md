@@ -9,3 +9,8 @@
   - ad esempio vedi il softswitch `SSPST_v_2_0`, giova esattamente di sta cosa qui!
   - è buono anche per un altro motivo; hi-voltages don't go to GND! se ho un gain alto all'inizio, poi se ho un volume pot, quando è a zero, manderà il segnale ad alto voltaggio nella GND, rischiando di creare disto-bleed!!!
   - **è probabilmente il motivo per cui succedeva il noise con `weston`**
+  
+  tradeoff:
+  in inverting summer config:
+  hi res value (100k) >> more thermal noise(louder noise floor), virtually no distortion
+  low res value (47k, 10k) >> no thermal noise, distortion may happen
