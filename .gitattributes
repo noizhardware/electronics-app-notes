@@ -1,4 +1,6 @@
 $ cat .gitattributes
 *.html linguist-detectable=true
 *.html linguist-language=html
-CSS/* linguist-vendored=true
+*.md linguist-detectable=true
+*.md linguist-language=Markdown
+CSS/* linguist-vendored
