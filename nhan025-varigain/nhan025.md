@@ -2,12 +2,15 @@
 ###### App Note nhan025
 
 ## Main schematics:
-* the non-inverting version is free from distortion and safe to use:
+
+### non-inverting
+the non-inverting version is free from distortion and safe to use:
 <img src="img/varigain-NI.png" alt="" width="80%"/>
 Gmin = 1x
 Gmax = 1 + Rp/Rs
 
-* this is the inverting version, might cause distortion in certain cases.
+### inverting
+this is the inverting version, might cause distortion in certain cases.
   If you need it to be inverting, the best way is to use the non.inverting and invert later.
 <img src="img/varigain.png" alt="" width="80%"/>
 
