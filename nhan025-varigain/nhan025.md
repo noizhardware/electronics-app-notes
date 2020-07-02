@@ -8,6 +8,7 @@ the non-inverting version is free from distortion and safe to use:
 <img src="img/varigain-NI.png" alt="" width="80%"/>
 
 Gmin = 1x
+
 Gmax = 1 + Rp/Rs
 
 ### inverting
