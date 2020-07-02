@@ -15,7 +15,7 @@
   hi res value (100k) >> more thermal noise(louder noise floor)
   low res value (47k, 10k) >> no thermal noise, distortion may happen
   **after testing (2020g01):** see _resistor-tradeoff.png_
-  - nope. tested with 100k, 47k, 10k resistors. all the same:
+  - nope. tested with 100k, 47k, 10k resistors. using a 10Vpk sine to check for extreme scenarios. all the same:
       noticed no distortion, and no increase-decrease in noise floor levels
   - also tried with a floating input (adding a 1M pull-down, that should be a worst-case-scenario)
     noise floor with floating input was unchanged
