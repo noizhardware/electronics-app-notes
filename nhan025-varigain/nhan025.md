@@ -14,6 +14,7 @@ Gmax = 1 + Rp/Rs
 ### inverting
 this is the inverting version, might cause distortion in certain cases.
   If you need it to be inverting, the best way is to use the non.inverting and invert later.
+
 <img src="img/varigain.png" alt="" width="80%"/>
 
 
