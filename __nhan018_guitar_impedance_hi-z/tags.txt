@@ -1,5 +1,0 @@
-﻿impedance
-guitar
-instrument
-hi-z
-hiz
