@@ -27,8 +27,9 @@ TODO: set lower limits for `Ri` and `Rm` to work without distortion.
 
 <img src="img/varigain.png" alt="" width="80%"/>
 
-Rm = Gmin * Ri
-Ri = (Rf + Rm) / Gmax
+**Rm** = Gmin * Ri
+
+**Ri** = (Rf + Rm) / Gmax
 
 
 
