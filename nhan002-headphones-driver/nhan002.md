@@ -5,9 +5,9 @@
 <img src="img/hp-v10.png" alt="2020f01" width="80%"/>
 On the left the original version, on the right the final version, can drive a single channel or two channels in parallel.
 
-100n cap to block unwanted DC, for once :D
+`100n` cap to block unwanted DC, for once :D
 
-For stereo headphones, use 2 separated copies. You can use **opa4134**, quad version of the **opa2134**. OR keep two separate **opa2134s** for a multipurpose pcb.
+For stereo headphones, use 2 separated copies. You can use **opa4134**, quad version of the **opa2134**. OR use two separate **opa2134s** for a mono-stereo multi-purpose pcb.
 
 The `non-bus` resistor is to be used when you have a single source coming in. In this case use `100k` resistors
 
