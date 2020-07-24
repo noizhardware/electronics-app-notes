@@ -17,13 +17,13 @@ the non-inverting version is free from distortion and safe to use.
 ### inverting
 This is the inverting version, might cause distortion in some cases.
 
-Use this if you need to have `Gmin` smaller than 1.
+Use this **ONLY** if you need to have `Gmin` smaller than 1.
 
 Small resistor values for `Ri` and `Rm` might result in distortion. **ALWAYS TEST**
 
 TODO: set lower limits for `Ri` and `Rm` to work without distortion.
 
-  If you need it to just be inverting, the best way is to use the non-inverting circuit and then invert the signal.
+  If you need it to just be inverting, the best way to do it is using the non-inverting version and then inverting the signal.
 
 <img src="img/varigain.png" alt="" width="80%"/>
 
