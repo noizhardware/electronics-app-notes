@@ -18,7 +18,7 @@ the non-inverting version is free from distortion and safe to use.
 This is the inverting version, might cause distortion in some cases.
 
 **ACHTUNG** (2020g24) using a `tl082` instead of a `tl074` _seems_ to be solving the distortion problem with this version.
-In the end this is the most flexible version, as you're not stuck with a fixed `1x` for the **Gmax**.
+In the end this is the most flexible version, as you're not stuck with a fixed `1x` for the **Gmin**.
 
 Use this **ONLY** if you need to have `Gmin` smaller than 1.
 
