@@ -1,3 +1,0 @@
- - change "author" metatag
- - fuzzy search engine? .js?
- - CC-SA-NC

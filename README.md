@@ -10,6 +10,11 @@ Application notes, mostly for audio electronics
 - [nhan024](nhan024-utilities/nhan024.md): **Utilities**
 - [nhan025](nhan025-varigain/nhan025.md): Varigain
 
+---
+**TODO:**
+ - change "author" metatag
+ - fuzzy search engine? .js?
+
 <!--
 ---
 <center>
