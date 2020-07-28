@@ -1,7 +1,6 @@
 $ cat .gitattributes
-*.html linguist-detectable=false
-*.html linguist-language=html
 *.md linguist-detectable=true
 *.md linguist-language=Markdown
 CSS/* linguist-vendored
 __nhan020_soft_switch/esp/* linguist-vendored
+nhan002-headphones-driver/others/* linguist-vendored
