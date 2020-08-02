@@ -7,6 +7,8 @@ Using `opa-x134` op-amps does usually solve the problem.
 
 **ALSO** use `47k` resistors (see pnd) to flatten the function near the center.
 
+**TO TEST:** polarity swapp >> inverted output???
+
 <img src="attenuverter.png" alt="" width="80%"/>
 
 ---
