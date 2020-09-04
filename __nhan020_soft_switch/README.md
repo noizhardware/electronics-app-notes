@@ -1,5 +1,6 @@
 ## henrik
 il più semplice, piu promettente per ora, da testare in production
+**testato 2020i03** - è OK, no bleedthru, no distorsione! (fare attenzione alle light leaks sul vactrol, deve essere ben isolato o al buio totale)
 
 ## SPDT
 ### funziona, ma con le dovute riserve
