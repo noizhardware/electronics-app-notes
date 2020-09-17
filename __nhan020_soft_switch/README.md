@@ -1,9 +1,22 @@
 ## henrik
 il più semplice, piu promettente per ora, da testare in production
 **testato 2020i03** - è OK, no bleedthru, no distorsione! (fare attenzione alle light leaks sul vactrol, deve essere ben isolato o al buio totale)
+So, this is the building block schematic, tested 2020i17-1652 :
+<img src="img/final-2020i17-1652.png" alt="" width="80%"/>
+notes:
+- it is an equivalent of using an SPST switch
+  - it can use a physical SPST, or SPDT, or basically anything
+- led cap is there to smooth the OFF>>ON transition, which would be to clicky without it
+  - also the ON>>OFF transition is influenced, sometimes it's too long, so you should use the smallest cap possible to just get rid of the OFF>>ON click. 4.7uF looks like a good value.
+- 32k pull-down resistor is ideal: shunts enought signal so when muted is really silent, and is not small enought to "squash" and distort the signal when ON.
+
+---
 
 ## SPDT
 ### funziona, ma con le dovute riserve
+### this is intended as an `output` stage, the final selector between two signals
+<img src="img/SPDT.jpg" alt="" width="80%"/>
+
 #### in teoria la versione completa andrebbe fatta con 4 vactrol... **vedi 4vactrolz.jpg**
   * il pcb `MTX_pedal7_v_0_0` introduce armoniche nel segnale, quando lo switch è `ON`.
   * con una sinewave da 5Vpk lo fà, de uso una sine da 1Vpk, non lo fa, ma c'è un transiente distorto quando flippo lo switch
@@ -40,5 +53,22 @@ il più semplice, piu promettente per ora, da testare in production
 ---
 
 #### TODO
-  - re-test `SPDT` alla luce delle nuove scoperte in spst
+  - re-test `SPDT` alla luce delle nuove scoperte in spst (???)
   - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
+
+<!--
+﻿,,switch
+,,,vactrol
+,,soft
+,,silent
+,,noise
+,,click
+,,clickless
+,,h11
+,,h11f1
+,,h11f1m
+,,opto
+,,optocoupler
+,,optocoupling
+,,fet
+-->
