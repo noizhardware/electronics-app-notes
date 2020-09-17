@@ -17,7 +17,7 @@ notes:
 ### this is intended as an `output` stage, the final selector between two signals
 <img src="img/SPDT.jpg" alt="" width="80%"/>
 
-#### in teoria la versione completa andrebbe fatta con 4 vactrol... **vedi 4vactrolz.jpg**
+#### in teoria la versione completa andrebbe fatta con 4 vactrol...  **vedi 4vactrolz.jpg**
   * il pcb `MTX_pedal7_v_0_0` introduce armoniche nel segnale, quando lo switch è `ON`.
   * con una sinewave da 5Vpk lo fà, de uso una sine da 1Vpk, non lo fa, ma c'è un transiente distorto quando flippo lo switch
   * provo a rimettere le 10k shunts
