@@ -4,11 +4,11 @@ il più semplice, piu promettente per ora, da testare in production
 So, this is the building block schematic, tested 2020i17-1652 :
 <img src="img/final-2020i17-1652.png" alt="" width="80%"/>
 notes:
-- it is an equivalent of using an SPST switch
-  - it can use a physical SPST, or SPDT, or basically anything
-- led cap is there to smooth the OFF>>ON transition, which would be to clicky without it
-  - also the ON>>OFF transition is influenced, sometimes it's too long, so you should use the smallest cap possible to just get rid of the OFF>>ON click. 4.7uF looks like a good value.
-- 32k pull-down resistor is ideal: shunts enought signal so when muted is really silent, and is not small enought to "squash" and distort the signal when ON.
+- it is an equivalent of using an `SPST` switch
+  - it can use a physical `SPST`, or `SPDT`, or basically anything
+- led cap is there to smooth the **OFF>>ON** transition, which would be to clicky without it
+  - also the **ON>>OFF** transition is influenced, sometimes it's too long, so you should use the smallest cap possible to just get rid of the **OFF>>ON** click. `4.7uF` looks like a good value.
+- `32k` (`100k || 47k` in parallel) pull-down resistor is ideal: shunts enought signal so when muted is really silent, and is not small enought to "squash" and distort the signal when ON.
 
 ---
 
@@ -43,13 +43,17 @@ notes:
 
 ## SSPST v.2.0
 #### Soft Single Pole Single Throw
-  * vedi SSPST_v_2_0.jpg
+  * vedi SSPST_v_2_0.jpg :
+    <img src="img/SSPST_v_2_0.png" alt="" width="80%"/>
   * di base si puo prendere il SPST vecchio e semplicemente non bisogna mai mettere il gain prima dei vactrol, sempre DOPO!
 
 ## SPST
   * `SPST.jpg` mostra un po di configurazioni in cui funziona bene, testate
-  * `meagher-SPST.jpg` mostra un'ulteriore configurazione, embeddata in un mixer (poi non è davvero per Meagher, che necessita ti un SPDT)
+    <img src="img/SPST.jpg" alt="" width="80%"/>
+  * `meagher-SPST.jpg` mostra un'ulteriore configurazione, embeddata in un mixer (poi non è davvero per Meagher, che necessita di un SPDT)
+    <img src="img/meagher-SPST.jpg" alt="" width="80%"/>
   * `SPST-bufferpost.jpg` è una versione con un solo vactrol, con pochissimo passthru **USE WITH CAUTION**
+    <img src="img/SPST-bufferpost.jpg" alt="" width="80%"/>
 ---
 
 #### TODO
