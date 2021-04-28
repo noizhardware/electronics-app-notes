@@ -1,8 +1,10 @@
-﻿2020g25
+﻿2021d28
 
-* OUTPUT:  100R in series just before the output jack (see output.jpg) - shortcut protection
-* INPUT: 100k pull-down + 1k series, see INPUT.jpg
+* **OUTPUT**:  100R in series just before the output jack (see output.jpg) - shortcut protection
+* **INPUT**: 100k pull-down + 1k series, see INPUT.jpg
+
   1M is not really useful, with a floating input, it doesn't pull down enough to suppress the noise floor.
+  
   I was using 1M to keep the input impedance high, but from nhan018 we can see even with a guitar, a 100k pull-down is ok.
   - see nishInput.jpg, I used an ac-blocking cap + 1M shunt (1k series omitted by mistake) -- (also I could have used a 100k pull-down)
     - 2020g01 -- retested 100n ac-coup + 1M shunt + 1k series >> OK!
