@@ -3,8 +3,25 @@
 
 ## Main schematics:
 
+### inverting
+This is the inverting version, might cause distortion in some cases. (very rare at this point, but just always be on the lookout for problems)
+
+**ACHTUNG** (2021j28) always use a `tl082`!!! It prevents distortion in most cases with this version.
+In the end this is the most flexible version, as you're not stuck with a fixed `1x` for the **Gmin**.
+
+Small resistor values for `Ri` and `Rm` might result in distortion. **ALWAYS TEST**
+
+TODO: set lower limits for `Ri` and `Rm` to work without distortion.
+     - (2021j28) used Ri=10k Rm=2k and Rf=50k pot. All good (MTX_gain109876_v_0_0)
+
+<img src="img/varigain.png" alt="" width="80%"/>
+
+**Rm** = Gmin * Ri
+
+**Ri** = (Rf + Rm) / Gmax
+
 ### non-inverting
-the non-inverting version is free from distortion and safe to use.
+the non-inverting version is less versatile, but free from distortion and safe to use.
 `Gmin` cannot be smaller than 1 in this configuration.
 <img src="img/varigain-NI.png" alt="" width="80%"/>
 
@@ -14,25 +31,7 @@ the non-inverting version is free from distortion and safe to use.
 
 **Rs** = Rp / (Gmax - 1)
 
-### inverting
-This is the inverting version, might cause distortion in some cases.
 
-**ACHTUNG** (2020g24) using a `tl082` instead of a `tl074` _seems_ to be solving the distortion problem with this version.
-In the end this is the most flexible version, as you're not stuck with a fixed `1x` for the **Gmin**.
-
-Use this **ONLY** if you need to have `Gmin` smaller than 1.
-
-Small resistor values for `Ri` and `Rm` might result in distortion. **ALWAYS TEST**
-
-TODO: set lower limits for `Ri` and `Rm` to work without distortion.
-
-  If you need it to just be inverting, the best way to do it is using the non-inverting version and then inverting the signal.
-
-<img src="img/varigain.png" alt="" width="80%"/>
-
-**Rm** = Gmin * Ri
-
-**Ri** = (Rf + Rm) / Gmax
 
 
 
