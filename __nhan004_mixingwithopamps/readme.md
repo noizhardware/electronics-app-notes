@@ -12,15 +12,15 @@
   
 * **resistor tradeoff:**
   in inverting summer config:
-  hi res value (100k) >> more thermal noise(louder noise floor)
-  low res value (47k, 10k) >> no thermal noise, distortion may happen
-  **after testing (2020g01):** see _resistor-tradeoff.png_
+  - hi res value (100k) >> more thermal noise(louder noise floor)
+  - low res value (47k, 10k) >> no thermal noise, distortion may happen
+  - **after testing (2020g01):** see _resistor-tradeoff.png_
   - nope. tested with 100k, 47k, 10k resistors. using a 10Vpk sine to check for extreme scenarios. all the same:
-      noticed no distortion, and no increase-decrease in noise floor levels
+     - noticed no distortion, and no increase-decrease in noise floor levels
   - also tried with a floating input (adding a 1M pull-down, that should be a worst-case-scenario)
-    noise floor with floating input was unchanged
+    - noise floor with floating input was unchanged
   - conclusion: use 100k if you can, provides a better isolation and cross-talk prevention
-    when using long bus lines, it may help to use smaller summing resistors (see _antennanoise_), but in all other scenarios, stick with 100k and be happy
+    - when using long bus lines, it may help to use smaller summing resistors (see _antennanoise_), but in all other scenarios, stick with 100k and be happy
   
 ,,summing
 ,,noise
