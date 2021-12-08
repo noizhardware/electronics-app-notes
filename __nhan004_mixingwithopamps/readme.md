@@ -21,7 +21,7 @@ N O P E
      - noticed no distortion, and no increase-decrease in noise floor levels
   - also tried with a floating input (adding a 1M pull-down, that should be a worst-case-scenario)
     - noise floor with floating input was unchanged
-  - conclusion: use 100k if you can, provides a better isolation and cross-talk prevention
+  - **conclusion: use 100k if you can**, provides a better isolation and cross-talk prevention
     - when using long bus lines, it may help to use smaller summing resistors (see _antennanoise_), but in all other scenarios, stick with 100k and be happy
   
 ,,summing
