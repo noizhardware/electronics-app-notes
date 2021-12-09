@@ -23,6 +23,67 @@ N O P E
     - noise floor with floating input was unchanged
   - **conclusion: use 100k if you can**, provides a better isolation and cross-talk prevention
     - when using long bus lines, it may help to use smaller summing resistors (see _antennanoise_), but in all other scenarios, stick with 100k and be happy
+    
+---
+## images:
+
+daisy chaining
+<img src="img/daisychaining.jpg" width="80%"/>
+
+extra in
+<img src="img/extra_in.jpg" width="80%"/>
+
+inv-noninv_mixed_bus
+<img src="img/inv-noninv_mixed_bus.jpg" width="80%"/>
+
+inv-noninv_mixed_bus2
+<img src="img/inv-noninv_mixed_bus.jpg" width="80%"/>
+
+meagherMainOut
+<img src="img/meagherMainOut.jpg" width="80%"/>
+
+mixed_resistors_bus
+<img src="img/mixed_resistors_bus.jpg" width="80%"/>
+
+mtx_in8765_v00
+<img src="img/mtx_in8765_v00.jpg" width="80%"/>
+
+nested_bus
+<img src="img/nested_bus.jpg" width="80%"/>
+
+non-inverting-splitter
+<img src="img/non-inverting-splitter.png" width="80%"/>
+
+non-inverting-summer
+<img src="img/non-inverting-summer.jpg" width="80%"/>
+
+non-inverting-summer-2
+<img src="img/non-inverting-summer-2.jpg" width="80%"/>
+
+opamp-gain
+<img src="img/opamp-gain.jpg" width="80%"/>
+
+outbus_volume
+<img src="img/outbus_volume.jpg" width="80%"/>
+
+resistor-network-termination
+<img src="img/resistor-network-termination.png" width="80%"/>
+
+resistor-tradeoff
+<img src="img/resistor-tradeoff.png" width="80%"/>
+
+single-opamp-gain
+<img src="img/single-opamp-gain.jpg" width="80%"/>
+
+standard_bus
+<img src="img/standard_bus.jpg" width="80%"/>
+
+summing_bus_multiplication
+<img src="img/summing_bus_multiplication.jpg" width="80%"/>
+
+vol-nonvol_mixed_bus
+<img src="img/vol-nonvol_mixed_bus.jpg" width="80%"/>
+
   
 ,,summing
 ,,noise
