@@ -37,7 +37,7 @@ inv-noninv_mixed_bus
 <img src="img/inv-noninv_mixed_bus.jpg" width="80%"/>
 
 inv-noninv_mixed_bus2
-<img src="img/inv-noninv_mixed_bus.jpg" width="80%"/>
+<img src="img/inv-noninv_mixed_bus2.jpg" width="80%"/>
 
 meagherMainOut
 <img src="img/meagherMainOut.jpg" width="80%"/>
