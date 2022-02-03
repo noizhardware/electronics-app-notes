@@ -16,9 +16,15 @@ TODO: set lower limits for `Ri` and `Rm` to work without distortion.
 
 <img src="img/varigain.png" alt="" width="80%"/>
 
-**Rm** = Gmin * Ri
+~~~~
+Rm = ((Gmin * Rf) / Gmax) / (1 - (Gmin / Gmax))
+Ri = (Rf + Rm) / Gmax
+~~~~
 
-**Ri** = (Rf + Rm) / Gmax
+~~~~
+Rm = Gmin * Ri
+Ri = (Rf + Rm) / Gmax
+~~~~
 
 ### non-inverting
 the non-inverting version is less versatile, but free from distortion and safe to use.
