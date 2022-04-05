@@ -22,7 +22,9 @@ Ri = (Rf + Rm) / Gmax
 ~~~~
 
 kalk:
+
 `Gmin Rf * 5 / Gmin Gmax / 1 s - / ..` >> Rm
+
 `Rf + Gmax / ..` >> Ri
 
 
