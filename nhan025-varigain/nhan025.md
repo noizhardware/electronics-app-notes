@@ -21,6 +21,11 @@ Rm = ((Gmin * Rf) / Gmax) / (1 - (Gmin / Gmax))
 Ri = (Rf + Rm) / Gmax
 ~~~~
 
+```
+Gmin Rf * 5 / Gmin Gmax / 1 s - / .. >> Rm
+Rf + Gmax / .. >> Ri
+```
+
 ~~~~
 Rm = Gmin * Ri
 Ri = (Rf + Rm) / Gmax
