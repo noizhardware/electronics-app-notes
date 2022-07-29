@@ -11,6 +11,12 @@ N O P E
   - ad esempio vedi il softswitch `SSPST_v_2_0`, giova esattamente di sta cosa qui!
   - è buono anche per un altro motivo; hi-voltages don't go to GND! se ho un gain alto all'inizio, poi se ho un volume pot, quando è a zero, manderà il segnale ad alto voltaggio nella GND, rischiando di creare disto-bleed!!!
   - **è probabilmente il motivo per cui succedeva il noise con `weston`**
+
+~~~~
+(signal+noise) :
+(s+n)>>(3xGain)>>(3s+3n)>>(+noise)>>(3s+4n)
+(s+n)>>(+noise)>>(s+2n)>>(3xGain)>>(3s+6n) putting gain at the end of thr chain is WORSE!
+~~~~
   
 * **resistor tradeoff:**
   in inverting summer config:
