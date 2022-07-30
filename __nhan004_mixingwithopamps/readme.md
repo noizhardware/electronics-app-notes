@@ -6,6 +6,8 @@
 
 N O P E
 
+- see also https://sound-au.com/dwopa.htm
+
 * in caso di (gain > 1), mettere sempre il gain il più "alla fine" possibile, quando possibile
   - mantenere il segnale con (gain == 1) per il più possibile, per evitare distorsioni e bleed.
   - ad esempio vedi il softswitch `SSPST_v_2_0`, giova esattamente di sta cosa qui!
