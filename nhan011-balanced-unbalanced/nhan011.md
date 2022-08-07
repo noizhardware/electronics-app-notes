@@ -14,12 +14,17 @@
 <img src="img/bal-unbal.png" alt="" width="80%"/>
 
 - tests with feeding a balanced signal to my `Zoom H4n`'s balanced inputs
+	+ note: you should add a non-inverting buffer just after the input, providing OPA-class buffering to the (+) output (2022h03-1854)
+	+ note: you should add 100R output resistors (2022h03-1854)
 <img src="img/h4n.png" alt="" width="80%"/>
 
 
-
-
-
+### See also
+- [Designing With Opamps - Part 3](https://sound-au.com/articles/dwopa3.htm)
+- [Balanced Inputs & Outputs - The Things No-One Tells You](https://sound-au.com/articles/balanced-io.htm)
+- [Design of High-Performance Balanced Audio Interfaces](https://sound-au.com/articles/balanced-2.htm) 10 ohms in parallel with 100nF (XLR GND)>>(chassis)
+- [Balanced Line Driver & Receiver](https://sound-au.com/project51.htm)
+- [Balanced Transmitter and Receiver II](https://sound-au.com/project87.htm) << **USE THIS!!!** 2022h03-1602
 
 ---
 <center>
