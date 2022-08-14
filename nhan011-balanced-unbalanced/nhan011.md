@@ -22,7 +22,7 @@
 ### See also
 - [Designing With Opamps - Part 3](https://sound-au.com/articles/dwopa3.htm)
 - [Balanced Inputs & Outputs - The Things No-One Tells You](https://sound-au.com/articles/balanced-io.htm)
-- [Design of High-Performance Balanced Audio Interfaces](https://sound-au.com/articles/balanced-2.htm) 10 ohms in parallel with 100nF (XLR GND)>>(chassis)
+- [Design of High-Performance Balanced Audio Interfaces](https://sound-au.com/articles/balanced-2.htm) 10 ohms in parallel with 100nF (XLR GND)>>(chassis) // poi qui https://sound-au.com/project51.htm dice che bisogna sperimentare per capire da quale parte mettere questa cosa, se nel transmitter o nel receiver. e se lo metto da entrmbe le parti? BHO 2022h11-2306
 - [Balanced Line Driver & Receiver](https://sound-au.com/project51.htm)
 - [Balanced Transmitter and Receiver II](https://sound-au.com/project87.htm) << **USE THIS!!!** 2022h03-1602
 
