@@ -1,4 +1,4 @@
-﻿2021d28
+﻿2022i12-1533
 
 * **OUTPUT**:  100R in series just before the output jack (see output.jpg) - shortcut protection
 * **INPUT**: 100k pull-down + 1k series, see INPUT.jpg
@@ -14,6 +14,8 @@
 
 
 * bhoooo.jpg mi sembra non abbia senso: perchè ho collegato un inverting opamp in quel punto del ciruito? che è poi da dove lo collego allo scope...bhoooo
+	era per vedere se in quel punto il segnale si azzerava, in caso l'output venisse collegato a massa
+	è una simulazione di quando inserisci un jack, la tip tocca la massa. per proteggere il opamp si mette una resistenza in serie dopo l'output (di solito 100R) 
 
 ,,input
 ,,output
