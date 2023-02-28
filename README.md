@@ -8,6 +8,7 @@ Application notes, mostly for audio electronics
 - [nhan010](nhan010-mechanical-normalling/nhan010.md): Mechanical Normalling
 - [nhan011](nhan011-balanced-unbalanced/nhan011.md): Balanced - Unbalanced
 - [nhan018](nhan018-guitar-input-impedance/nhan018.md): Guitar input impedance
+- [nhan020](nhan020_soft_switch/nhan020.md): Soft switch / Soft mute
 - [nhan024](nhan024-utilities/nhan024.md): **Utilities**
 - [nhan025](nhan025-varigain/nhan025.md): Varigain
 
