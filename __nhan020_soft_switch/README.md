@@ -1,3 +1,8 @@
+## Soft mute
+tested 2023b28-1929
+**USE THIS ONE**
+<img src="img/softMute.png" alt="" width="80%"/>
+
 ## henrik
 il più semplice, piu promettente per ora, da testare in production
 **testato 2020i03** - è OK, no bleedthru, no distorsione! (fare attenzione alle light leaks sul vactrol, deve essere ben isolato o al buio totale)
@@ -9,6 +14,9 @@ notes:
 - led cap is there to smooth the **OFF>>ON** transition, which would be to clicky without it
   - also the **ON>>OFF** transition is influenced, sometimes it's too long, so you should use the smallest cap possible to just get rid of the **OFF>>ON** click. `4.7uF` looks like a good value.
 - `32k` (`100k || 47k` in parallel) pull-down resistor is ideal: shunts enought signal so when muted is really silent, and is not small enought to "squash" and distort the signal when ON.
+
+- system integration:
+	<img src="img/henrik.jng" alt="" width="80%"/>
 
 ---
 
@@ -54,15 +62,30 @@ notes:
     <img src="img/meagher-SPST.jpg" alt="" width="80%"/>
   * `SPST-bufferpost.jpg` è una versione con un solo vactrol, con pochissimo passthru **USE WITH CAUTION**
     <img src="img/SPST-bufferpost.jpg" alt="" width="80%"/>
+
 ---
+
+### old imgs
+- `softswitch.png`
+	- <img src="img/softswitch.png" alt="" width="80%"/>
+	- hear sounds from `/snd` folder
+
+- `4vactrolz.jpg`
+	- <img src="img/4vactrolz.jpg" alt="" width="80%"/>
+
+- `hardswitch-not-gate.jpg`
+	- <img src="img/hardswitch-not-gate.jpg" alt="" width="80%"/>
+
+- `hardswitch-yes-gate.jpg`
+	- <img src="img/hardswitch-yes-gate.jpg" alt="" width="80%"/>
 
 #### TODO
   - re-test `SPDT` alla luce delle nuove scoperte in spst (???)
   - try H11F optocouplers (datasheet with appnote here in folder)(0.42€ each)
 
 <!--
-﻿,,switch
-,,,vactrol
+,,switch
+,,vactrol
 ,,soft
 ,,silent
 ,,noise
