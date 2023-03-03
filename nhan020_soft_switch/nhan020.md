@@ -1,6 +1,7 @@
 ## Soft mute
 - tested 2023b28-1929 with TL07x series
 - **USE THIS ONE**
+- the cap should be rated at least `25V`
 <img src="img/softMute.png" alt="" width="80%"/>
 
 ## henrik
