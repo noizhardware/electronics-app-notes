@@ -3,6 +3,13 @@
 
 ## Main schematics:
 
+### range [-inf..Gmax]
+Use this if you want `-inf` as Gmin, you can't achieve it with the other architectures
+This version is inverting
+
+<img src="img/varigain_0_Gmax.png" alt="" width="80%"/>
+
+
 ### inverting
 This is the inverting version, might cause distortion in some cases. (very rare at this point, but just always be on the lookout for problems)
 
