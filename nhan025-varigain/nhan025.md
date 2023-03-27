@@ -6,7 +6,7 @@
 ### range [-inf..Gmax]
 Use this if you want `-inf` as Gmin, you can't achieve it with the other architectures. This version is inverting.
 
-**OK CONFIRMED WORKING** 2023c27-1706
+**OK CONFIRMED WORKING** 2023c27-1706 : use a `TL08x`, the remaining opamps in the package can be also used in the rest of the circuit to safely handle audio signals
 
 <img src="img/varigain_0_Gmax.png" alt="" width="80%"/>
 
