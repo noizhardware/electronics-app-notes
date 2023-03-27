@@ -4,8 +4,9 @@
 ## Main schematics:
 
 ### range [-inf..Gmax]
-Use this if you want `-inf` as Gmin, you can't achieve it with the other architectures
-This version is inverting
+Use this if you want `-inf` as Gmin, you can't achieve it with the other architectures. This version is inverting.
+
+**OK CONFIRMED WORKING** 2023c27-1706
 
 <img src="img/varigain_0_Gmax.png" alt="" width="80%"/>
 
