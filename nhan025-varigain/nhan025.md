@@ -3,15 +3,16 @@
 
 ## Main schematics:
 
-### range [-inf..Gmax]
+### range [-inf..Gmax] (inverting)
 Use this if you want `-inf` as Gmin, you can't achieve it with the other architectures. This version is inverting.
 
 **OK CONFIRMED WORKING** 2023c27-1706 : use a `TL08x`, the remaining opamps in the package can be also used in the rest of the circuit to safely handle audio signals
 
 <img src="img/varigain_0_Gmax.png" alt="" width="80%"/>
 
+---
 
-### inverting
+### range [Gmin..Gmax] (inverting)
 This is the inverting version, might cause distortion in some cases. (very rare at this point, but just always be on the lookout for problems)
 
 **ACHTUNG** (2021j28) always use a `tl082`!!! It prevents distortion in most cases with this version.
@@ -41,7 +42,9 @@ Rm = Gmin * Ri
 Ri = (Rf + Rm) / Gmax
 ~~~~
 
-### non-inverting
+---
+
+### range [1x..Gmax] (non-inverting)
 the non-inverting version is less versatile, but free from distortion and safe to use.
 `Gmin` cannot be smaller than 1 in this configuration.
 <img src="img/varigain-NI.png" alt="" width="80%"/>
