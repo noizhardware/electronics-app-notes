@@ -15,7 +15,7 @@ Use this if you want `-inf` as Gmin, you can't achieve it with the other archite
 ### range [Gmin..Gmax] (inverting)
 This is the inverting version, might cause distortion in some cases. (very rare at this point, but just always be on the lookout for problems)
 
-**ACHTUNG** (2021j28) always use a `tl082`!!! It prevents distortion in most cases with this version.
+**ACHTUNG** (2021j28) always use a `TL08x`!!! It prevents distortion in most cases with this version.
 In the end this is the most flexible version, as you're not stuck with a fixed `1x` for the **Gmin**.
 
 Small resistor values for `Ri` and `Rm` might result in distortion. **ALWAYS TEST**
