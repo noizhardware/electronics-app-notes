@@ -21,7 +21,7 @@ In the end this is the most flexible version, as you're not stuck with a fixed `
 Small resistor values for `Ri` and `Rm` might result in distortion. **ALWAYS TEST**
 
 TODO: set lower limits for `Ri` and `Rm` to work without distortion.
-     - (2021j28) used Ri=10k Rm=2k and Rf=50k pot. All good (MTX_gain109876_v_0_0)
+     - (2021j28) used Ri=10k Rm=2k and Rf=B50k pot. All good (MTX_gain109876_v_0_0)
 
 <img src="img/varigain.png" alt="" width="80%"/>
 
