@@ -42,6 +42,7 @@ Ri = (Rf + Rm) / Gmax
 ~~~~
 
 `Rm Ri / .. ( Gmin )` >> Gmin
+
 `Rf Rm + Ri / .. ( Gmax )` >> Gmax
 
 ~~~~
