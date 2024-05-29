@@ -36,10 +36,17 @@ kalk:
 
 `Rf + Gmax / .. ( Ri )` >> Ri
 
-
 ~~~~
 Rm = Gmin * Ri
 Ri = (Rf + Rm) / Gmax
+~~~~
+
+`Rm Ri / .. ( Gmin )` >> Gmin
+`Rf Rm + Ri / .. ( Gmax )` >> Gmax
+
+~~~~
+Gmin = Rm / Ri
+Gmax = (Rf + Rm) / Ri
 ~~~~
 
 ---
