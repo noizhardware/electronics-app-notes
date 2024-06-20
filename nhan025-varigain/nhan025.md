@@ -54,8 +54,16 @@ Gmax = (Rf + Rm) / Ri
 
 ### range [1x..Gmax] (non-inverting)
 the non-inverting version is less versatile, but free from distortion and safe to use.
+
 `Gmin` cannot be smaller than 1 in this configuration.
+
+2024f20-2231 : use a `TL08x`, the remaining opamps in the package can be also used in the rest of the circuit to safely handle audio signals
+
 <img src="img/varigain-NI.png" alt="" width="80%"/>
+
+`Rp Rs / 1 + .. ( Gmax )`
+
+`Rp Gmax 1 - / .. ( Rs )`
 
 **Gmin** = 1
 
