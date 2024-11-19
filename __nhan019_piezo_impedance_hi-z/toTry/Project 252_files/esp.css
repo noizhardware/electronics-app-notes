@@ -1,0 +1,97 @@
+h1 { font-family: Arial, helvetica, sans-serif; font-size: 14pt; font-weight: bold; text-align: center }
+h2 { font-family: Arial, helvetica, sans-serif; font-size: 12pt; font-weight: bold; text-align: center }
+h3 { font-family: Arial, helvetica, sans-serif; font-size: 12pt }
+li { font-family: Arial, helvetica, sans-serif; font-size: 12pt }
+ul { font-family: Arial, helvetica, sans-serif; font-size: 12pt }
+ol { font-family: Arial, helvetica, sans-serif; font-size: 12pt }
+td { font-family: Arial, helvetica, sans-serif; font-size: 12pt }
+th { font-family: Arial, helvetica, sans-serif; font-size: 12pt }
+p { font-family: Arial, helvetica, sans-serif; font-size: 12pt }
+textarea { font-family: "arial", helvetica, sans-serif; font-size: 12pt }
+input { font-family: "arial", helvetica, sans-serif; font-size: 12pt }
+
+body { margin-left: 50px; margin-right: 50px; padding:20px; box-shadow: 10px 10px 5px grey; } 
+
+.page_wrapper { width:65em; margin:0 auto; padding: 20px; border: solid 1px #555; box-shadow: 10px 10px 5px grey; }
+
+table { border-collapse: collapse; }
+table.bottomBorder { border-collapse: collapse; }
+table.bottomBorder td, table.bottomBorder th { border-bottom: 1px solid black; padding: 10px; text-align: left; }
+
+span.imgswap {background-image:url("a.gif"); 
+background-repeat: no-repeat; display:block;}
+span.imgswap:hover img {visibility:hidden;}
+
+
+A { color: #003399; text-decoration: none }
+A:visited { color: #003377 }
+A:active { color: #003399 }
+A:hover { color: #00cc00; text-decoration: underline }
+A.inline { color: #003399; text-decoration: underline }
+
+sub { font-family: Arial helvetica, sans-serif; font-size: 8pt }
+sup { font-family: Arial, helvetica, sans-serif; font-size: 8pt }
+body { font-family: Arial, helvetica, sans-serif; font-size: 12pt; background-color: #ffffff }
+
+.under { font-family: Arial, helvetica, sans-serif; font-size: 12pt; text-decoration: underline }
+.tap { font-family: Arial, helvetica, sans-serif; font-size: 25pt; color: blue; font-weight: bold; }
+.hdrl { font-family: Arial, helvetica, sans-serif; font-size: 12pt; color: white; font-weight: bold; }
+.hdrr { font-family: Arial, helvetica, sans-serif; font-size: 14pt; color: white; font-weight: bold; }
+.hdrb { font-family: Arial, helvetica, sans-serif; font-size: 24pt; color: blue; font-weight: bold; }
+
+.ab { font-family: Arial, helvetica, sans-serif; font-size: 12pt; color: black; }
+.bb { font-family: Arial, helvetica, sans-serif; font-size: 12pt; font-weight: bold; color: black; }
+.t-pic { font-family: Arial, helvetica, sans-serif; font-size: 11pt; font-weight: bold; text-align: center }
+.t_pic { font-family: Arial, helvetica, sans-serif; font-size: 11pt; font-weight: bold; text-align: center }
+.b-wht { font-family: Arial, helvetica, sans-serif; font-size: 12pt; color: white; font-weight: bold; }
+.b_wht { font-family: Arial, helvetica, sans-serif; font-size: 12pt; color: white; font-weight: bold; }
+.b-whts { font-family: Arial, helvetica, sans-serif; font-size: 11pt; color: white; font-weight: bold; }
+.b_whts { font-family: Arial, helvetica, sans-serif; font-size: 11pt; color: white; font-weight: bold; }
+.t-wht { font-family: Arial, helvetica, sans-serif; font-size: 10pt; color: white; }
+.t_wht { font-family: Arial, helvetica, sans-serif; font-size: 10pt; color: white; }
+.t-red { font-family: Arial, helvetica, sans-serif; font-size: 10pt; color: red; }
+.t_red { font-family: Arial, helvetica, sans-serif; font-size: 10pt; color: red; }
+.t-blu { font-family: Arial, helvetica, sans-serif; font-size: 10pt; color: blue; }
+.t_blu { font-family: Arial, helvetica, sans-serif; font-size: 10pt; color: blue; }
+.t-sml { font-family: Arial, helvetica, sans-serif; font-size: 8pt; }
+.t_sml { font-family: Arial, helvetica, sans-serif; font-size: 8pt; }
+.t_8   { font-family: Arial, helvetica, sans-serif; font-size: 8pt; }
+.t_9   { font-family: Arial, helvetica, sans-serif; font-size: 9pt; }
+.t_8b  { font-family: Arial, helvetica, sans-serif; font-size: 8pt; font-weight: bold; }
+.t-med { font-family: Arial, helvetica, sans-serif; font-size: 9pt; }
+.t-nav { font-family: Arial, helvetica, sans-serif; font-size: 12pt; color: white; font-weight: bold; }
+.t_nav { font-family: "verdana", arial, helvetica, sans-serif; font-size: 12pt; color: white; font-weight: bold; }
+.t_12  { font-family: Arial, helvetica, sans-serif; font-size: 12pt; }
+.t_12i  { font-family: Arial, helvetica, sans-serif; font-size: 12pt; font-style: italic; }
+.t_12w { font-family: Arial, helvetica, sans-serif; font-size: 12pt; color: white; }
+.t_12b { font-family: Arial, helvetica, sans-serif; font-size: 12pt; font-weight: bold; }
+.t_13b { font-family: Arial, helvetica, sans-serif; font-size: 13pt; font-weight: bold; }
+.t_14b { font-family: Arial, helvetica, sans-serif; font-size: 14pt; font-weight: bold; }
+.t-11g { font-family: Arial, helvetica, sans-serif; font-size: 11pt; color: #252525 }
+.t_11g { font-family: Arial, helvetica, sans-serif; font-size: 11pt; color: #252525 }
+.t-12g { font-family: Arial, helvetica, sans-serif; font-size: 12pt; color: #252525 }
+.t_12g { font-family: Arial, helvetica, sans-serif; font-size: 12pt; color: #252525 }
+.t_10  { font-family: Arial, helvetica, sans-serif; font-size: 10pt; }
+.t_10b { font-family: Arial, helvetica, sans-serif; font-size: 10pt; font-weight: bold; }
+.t_11  { font-family: Arial, helvetica, sans-serif; font-size: 11pt; }
+.t_11i  { font-family: Arial, helvetica, sans-serif; font-style: italic; font-size: 11pt; }
+.t_11b { font-family: Arial, helvetica, sans-serif; font-size: 11pt; font-weight: bold; }
+.t_red11  { font-family: Arial, helvetica, sans-serif; font-size: 11pt; color: red; }
+.t_red12  { font-family: Arial, helvetica, sans-serif; font-size: 12pt; color: red; }
+.footnote {font-family: Arial, helvetica, sans-serif; font-size: 10pt; color: gray; }
+.t-note {  font-family: Arial, helvetica, sans-serif; font-size: 12pt; font-weight: bold; text-align: center }
+.t-index { font-family: Arial, helvetica, sans-serif; font-size: 12pt; font-weight: bold; color: black }
+.strike { text-decoration: line-through; }
+.under { text decoration: underline; }
+.c-new { font-family: "Monospace", Courier New, serif; font-size: 13pt; }
+.times { font-family: "times", times new roman, serif; font-size: 14pt; }
+
+.li-sml { font-family: Arial, helvetica, sans-serif; font-size: 10pt; }
+.tblgrey { background-color: #eeeeee; }
+.tbldark { background-color: #cccccc; }
+.tblblue { background-color: blue; }
+.tblgrn { background-color: green; }
+.tbllgrn { background-color: #00c400; }
+.tblblk { background-color: black; }
+.tblyel { background-color: yellow; }
+.tblred { background-color: red; }

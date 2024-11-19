@@ -1,0 +1,1717 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0035)https://sound-au.com/project249.htm -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="canonical" href="https://sound-au.com/project249.htm">
+  <script type="text/javascript" charset="UTF-8" src="./Project 249_files/c4306502fb5f29fb4e9801f5080fb662.js.download"></script>
+	
+	<meta name="Author" content="Rod Elliott - Elliott Sound Products">
+	<meta name="description" content="ESP - Project 249 - booster amplifier for guitar.">
+	<meta name="keywords" content="guitar, booster, mosfet, transistor, fet, jfet, amplifier, preamp, audio, diy, hi-fi, electronic">
+	<title>Project 249</title>
+	<!-- ESP - Project 248 - booster amplifiers for guitar -->
+	<link rel="StyleSheet" href="./Project 249_files/esp.css" type="text/css" media="screen, print">
+	<style type="text/css"><!-- td { font-size: 11pt } th { font-size: 11pt } --> </style>
+	<link rel="shortcut icon" type="image/ico" href="https://sound-au.com/favicon.ico">
+<script async="" src="./Project 249_files/f.txt"></script>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-1947877433449191",
+		enable_page_level_ads: true
+	});
+</script>
+	<style>
+	#pgbtn {
+		display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99; font-size: 12px;
+		border: none; outline: none; background-color: blue; color: white; cursor: pointer;
+		padding: 15px; border-radius: 4px; }
+	#pgbtn:hover { background-color: #555; }
+	</style>
+</head>
+
+<body>
+<table style="width:100%"><tbody><tr><td><img src="./Project 249_files/esp.jpg" alt="ESP Logo" height="81" width="215">
+</td><td align="right">
+<script async="" src="./Project 249_files/f.txt"></script>
+	<!-- 468x60, created 20/08/10 -->
+	<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-1947877433449191" data-ad-slot="7119701939"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td></tr></tbody></table>
+<table style="width:100%" class="tblblue" cellpadding="5"><tbody><tr><td class="hdrl">&nbsp;Elliott Sound Products</td>
+<td align="right" class="hdrr">Project 249&nbsp;</td></tr></tbody></table>
+
+<h1>Booster Amplifiers For Guitar<br>
+A Collection Of Ideas</h1>
+<div align="center" class="t_11">© Feb 2024, Rod Elliott</div>
+
+<button onclick="topFunction()" id="pgbtn" title="Go to top" style="display: block;">Top</button>
+<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30)
+		{ document.getElementById("pgbtn").style.display = "block"; }
+		else { document.getElementById("pgbtn").style.display = "none"; }}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0; }
+</script>
+
+<!-- AddThis Button BEGIN -->
+	<div class="addthis_inline_share_toolbox"></div>
+<!-- AddThis Button END -->
+
+<hr><b>Introduction</b>
+<p>Guitar 'booster' preamps have been through a number of cycles, starting from non-existent, through to popular, then back to "nah!" (or is that "meh" now?) before interest picks up again.&nbsp; Circuits abound, with the best possible performance coming from well chosen opamps.&nbsp; BJTs (bipolar junction transistors) and JFET circuits are commonplace, but not all are well thought out.&nbsp; Some may place excessive loading on the guitar pickup and circuitry, so output level and frequency response are compromised prior to the signal being boosted again.</p>
+
+<p>Most guitar amps have a nominal 1MΩ input impedance, but that can be as low as 68k when two jack sockets are used for 'Hi' and Lo' gain (although the front panel isn't always clear if it refers to gain or pickup output).&nbsp; With some amps, 'Lo' or 'Low' refers to the gain, and on some others it refers to guitar output level (suitable for low output pickups).&nbsp; I expect that most guitarists have figured out which input they find most suitable, and they'll stay with that.&nbsp; Early amps are probably the least reliable in this respect, as there were no 'standards' (there still aren't, but common usage prevails).</p>
+
+<p>Boosters are used either to provide a simple way to overdrive the amp (with a foot switch), or because the player prefers the sound with some degree of boost and/ or tonal correction applied all the time.&nbsp; There's nearly always a need to be able to preset the amount of boost, which may be as low as 6dB (×2) or as high as 20dB (×10).&nbsp; Booster amplifiers can have a tone control or a fixed treble boost (usually selectable), using either a pot or switched settings.&nbsp; The circuits described are true boosters - they are not 'fuzz boxes', and they are intended only to boost the output from the guitar, with optional basic EQ that can help to get that last bit of bass or treble that may otherwise be elusive.</p>
+
+<p>This is actually a collection of ideas, rather than a single project, so the reader can make a choice as to which technique s/he prefers.&nbsp; There's no reason that circuits can't be combined if you feel that you like one front-end, but prefer to add treble boost or tone controls to a boost circuit that is not blessed with same.&nbsp; Not all circuits can include a treble boost function properly.&nbsp; For example, a JFET booster cannot provide much treble boost when operating at high gain, because there's little additional gain abailable.</p>
+
+<p>Because guitar pedals are expected to run from a 9V battery, the opamp used has to be rated for operation with less than ±4V, and this may rule out the TL07x series.&nbsp; While some will operate from a low voltage, others may not (it's not a guaranteed parameter).&nbsp; The TL06x range ('low power') is rated for a supply as low as ±2.5V and is a safer option, but they are not available from some suppliers.&nbsp; The RC/MC4558 has been a mainstay for guitar amps and pedals for a very long time, and while it's not the quietest opamp around, it is less noisy than most FET input opamps (especially the TL06x and TL07x).&nbsp; However, it uses a BJT input, so noise levels may be greater with a high impedance source.&nbsp; Most importantly, it will run happily with a 5V (±2.5V) supply, and it's an opamp that has a very long history in guitar amps and pedals.&nbsp; They are cheap, and no-one will ever claim they're wonderful, but they have been a staple for guitar effects and amplifiers for a very long time.&nbsp; At less than AU$1.00 each, they won't break the bank, and they only draw about 2.3mA (typical) for a dual opamp.</p>
+
+<p>Another opamp that I recommend is the OPA2134, which works down to 5V.&nbsp; It's a 'premium' low-noise part though, and is not inexpensive.&nbsp; With any JFET input opamp, protection diodes are essential to prevent damage to the input devices from static discharge.&nbsp; Use 1N4148 or similar.&nbsp; Note that they <i>will not</i> provide protection against high current input faults (such as plugging the input into the speaker jack of an amplifier).</p>
+
+<p>If you use an opamp circuit, make sure that it can operate down to 5V or so, or it will stop working as the battery discharges, but before it's reached 'end-of-life'.&nbsp; The LM4562 will work with a total supply of 5V, but they draw a current of up to 12mA, so battery life won't be much good.&nbsp; The OPA1642 is probably the pick of the bunch - under 5mA current for the dual, and operation down to 4.5V.&nbsp; However, they are only available in an SMD package.</p>
+
+<p><b>Note:&nbsp; </b>It's expected that readers will use the circuits shown as the basis for experimentation.&nbsp; PCBs will not be made available, because there are too many options that aren't directly interchangeable.&nbsp; Most are easily constructed using Veroboard, which is ideal for playing around with ideas.&nbsp; The gain pots will typically be linear, because antilog (aka reverse log) are too hard to get.</p>
+
+
+<hr><b>Guitar Output Levels</b>
+<p>This is always a can of worms, because the output level of any electric guitar is dependent on so many factors.&nbsp; Light vs. heavy strings, gentle finger playing vs. a <i>really</i> thick pick (think Dick Dale!), bridge vs. neck (or middle) pickup, the type(s) of pickup (single coil or humbucker), the magnet strength, etc., etc.&nbsp; There is no easy answer, but I did run some measurements on my guitars to get a few basic (and hopefully representative) numbers.</p>
+
+<p>The full details are shown in the <a href="https://sound-au.com/articles/guitar-voltage.htm" target="_blank">Guitar &amp; Bass Pickup Output Voltages</a> article.&nbsp; On average (taken with a variety of guitars and pickups), you can expect a level of between 25 and 80mV RMS, with peaks between 150 and 600mV.&nbsp; The peaks (just as the string is released by a finger or pick) are typically between 15 and 20dB greater than the averaged RMS voltage, and the level tapers off at a rate determined by the guitar itself.&nbsp; Some have more sustain than others, so notes/ chords last longer before disappearing into the noise.</p>
+
+<p>In the circuit descriptions that follow, you'll see references to signal clipping (a form of distortion).&nbsp; This simply means that the output signal is too high, and it can't exceed the supply voltage.&nbsp; When that happens, the signal is 'clipped' at the maximum peak voltage it can reach in a given circuit.&nbsp; An opamp can drive low impedances easily, but it's harder with discrete transistor (including JFETs and MOSFETs).&nbsp; These use a load resistor, and its value determines how much current can be supplied to the following stage.&nbsp; When loaded, most transistor (including FETs) circuits will clip asymmetrically, because the transistor can supply more current than the load resistor.&nbsp; Most guitar amplifier input stages will start distorting well before the output of the booster starts to clip.</p>
+
+<p>It's important to understand that the output impedance of any circuit does <i>not</i> mean it can drive that impedance.&nbsp; Opamps can have an output impedance of well below 1Ω, but they <i>cannot</i> drive impedances much below 1k or so (opamp dependent) at any significant voltage level.&nbsp; This is an area where many beginners (but not only beginners!) can get seriously confused.&nbsp; However, it's not hard to grasp once you understand the concepts.</p>
+
+
+<hr><b>Booster Amplifiers</b>
+<p>There are four choices here, being an opamp, a dual transistor stage, a JFET and a small-signal MOSFET.&nbsp; The two options for the tone control section (if used) are shown further below.&nbsp; The opamp is by far the most predictable and linear, and it has the lowest output impedance.&nbsp; This is important if you include tone controls, but the output can be taken directly from the booster amp if preferred (the output resistor and optional output socket are shown for each variant).&nbsp; The circuits don't include a bypass function, but that's easily done with a foot-switch.&nbsp; The drawing showing 'true bypass' is shown in Figure 8.&nbsp; Many people like the idea that the pedal is completely out of circuit in bypass mode, and it means that the signal can still get through if the battery or power supply fails partway through a set.</p>
+
+<p>In the following drawings, the option to use <i>only</i> the booster is shown, with the output resistor shown as R9 in all circuits.&nbsp; This is purely for consistency, and reflects the values shown for the opamp tone controls, which provides the best performance.&nbsp; If you use the opamp controls with a transistor, JFET or MOSFET booster, the other half of the opamp (assuming the use of a dual device) is not used.&nbsp; Whenever an opamp isn't used in a circuit, the output and inverting input should be joined, and the non-inverting input returned to a DC voltage of ½ the supply voltage.</p>
+
+<p class="t-pic"><img src="./Project 249_files/p249-f1.gif" border="1" alt="Fig 1"><br>Figure 1 - Opamp Booster Stage</p>
+
+<p>The maximum gain is set by VR1, and is about ×8.6 (18dB).&nbsp; The gain can be varied from unity to the maximum, and if you think you need more gain, decrease the value of R4.&nbsp; For example, if R4 is 560Ω the maximum gain is increased to about ×15 (23dB).&nbsp; While you can easily get more, it's unlikely to be useful.&nbsp; Another big advantage of the opamp booster is that it can drive a tone control circuit easily, without significant distortion (unless the gain is too high and the <i>tone control</i> circuit causes clipping.&nbsp; The ½ supply voltage (V<sub>ref</sub>) is created in the power supply circuit (Fig. 7) and is shared with the other half of a dual opamp, as used for a tone control circuit as shown in Fig. 5.</p>
+
+<p>The optional 'BP Out' (bypass output) provides a unity gain output regardless of the pot setting.&nbsp; DC is removed by C2, and the output impedance is less than 1k.&nbsp; If used, this lets you use a SPDT (single-pole, double-throw) switch for bypass, and it makes a very good line driver.&nbsp; Unlike the 'true bypass' system shown in Figure 9, the one shown here won't work without power.&nbsp; If this is important to you, then use the Figure 9 circuit.&nbsp; The current drawn depends completely on the opamp you use.&nbsp; A 4558 will draw about 2.5mA.</p>
+
+<hr>
+
+<p>Using transistors means more parts overall, and the input is also subject to power supply noise (mainly via R1, but <i>everything</i> connected to the supply rail can inject noise).&nbsp; Power supply rejection is only 32dB with the input open-circuit.&nbsp; The circuit shown used to be common in the days before opamps, and it performs reasonably well.&nbsp; The two transistors are in a feedback loop (AC and DC) formed by R5.&nbsp; VR1 changes the amount of AC feedback without changing the DC conditions (hence the inclusion of C2 in series with VR1).&nbsp; With 'sensible' gain settings, the circuit will still operate well down to about 7.5V (a dead-flat 9V battery), but if run at maximum gain you may get some clipping with 'hot' guitar pickups.&nbsp; The following circuit will draw around 2mA with a 9V supply.</p>
+
+<p class="t-pic"><img src="./Project 249_files/p249-f2.gif" border="1" alt="Fig 2"><br>Figure 2 - Dual Transistor Booster Stage</p>
+
+<p>The input impedance is lower than the opamp version, at a bit over 500k.&nbsp; This will rarely cause any issues but some players may prefer that the input impedance be higher than that.&nbsp; The gain is a little lower than the opamp version.&nbsp; It can be varied from unity to a maximum of 8.6 (18.7dB).&nbsp; It's unlikely that you'll need more, but if you do, the opamp is a better choice.&nbsp; The circuit shown is based on the circuit shown in Figure 3b in the article <a href="https://sound-au.com/no-opamps.htm" target="_blank">Opamp Alternatives</a>, with changes made to allow operation from a 9V supply.&nbsp; Any of the other circuits shown in the article can also be used, but values will need to be altered to bias the circuits from 9V, rather than the +18V supply used for most of the examples.</p>
+
+<p>The output impedance of the Figure 2 circuit is about 350Ω with maximum gain (it's reduced as gain is reduced).&nbsp; While 350Ω is higher than desirable, it can drive the tone control circuits reasonably well.&nbsp; Most basic transistor circuits will be similar, as it's not possible to get exceptionally low output impedance without an opamp (or a much more complex circuit than the one shown).&nbsp; The current drawn will be about 1.7mA.</p>
+
+<hr>
+
+<p>Of course, the circuits shown thus far are not the only way you can build a booster.&nbsp; JFETs can be a good choice for reduced noise, but they will almost always need either an adjustment trimpot or hand-selection because the characteristics are so variable.&nbsp; The parameter spread of JFETs is well known, and there nearly always has to be a method of adjusting the bias, especially for low voltage operation.&nbsp; MOSFETs can also be used, but small signal types such as the 2N7000 also have a significant parameter spread, and a means of adjustment is required for them too.&nbsp; Unlike (decent) JFETs, MOSFETs are usually pretty noisy (and this was verified with a bench test).&nbsp; Depending on your playing style and general preferences, this is either a problem or not.&nbsp; If you use a MOSFET, some form of gate protection is essential.&nbsp; If the maximum gate-source voltage is exceeded (even momentarily), the MOSFET will fail.</p>
+
+<p>In order to get a low output impedance, an emitter follower is included on the JFET booster circuit.&nbsp; You could use another JFET as a source follower, but it may need separate biasing for use with a 9V supply.&nbsp; A BJT is far more predictable, and they have a higher gain than JFETs.&nbsp; This minimises loading on the drain resistor and prevents a loss of gain.&nbsp; This is particularly important if the booster is expected to drive tone controls.&nbsp; JFETs have limited transconductance (which affects gain), and expecting more than ×20 (26dB) is probably unrealistic.&nbsp; However, this is usually plenty for a booster.</p>
+
+<p class="t-pic"><img src="./Project 249_files/p249-f3.gif" border="1" alt="Fig 3"><br>Figure 3 - JFET Booster Stage</p>
+
+<p>TP1 is a trimpot, and it should be adjusted to get about 3.9V at the emitter of Q2.&nbsp; Depending on the JFET you use, you may need to increase or decrease the value of R3 to enable the operating conditions to be set correctly.&nbsp; I've shown a 2N5484/5, but you'll almost certainly have to use what you can get.&nbsp; They have a mutual conductance (or transconductance) of between 2mmohs and 7.5mmhos (2-7.5mS [Siemens]), which is quite a bit more than a 12AX7 valve (1.25mS with 100V on the plate), included for comparative purposes only.&nbsp; The current drawn will be around 3.1mA.</p>
+
+<p>For detailed information on JFETs, please refer to the <a href="https://sound-au.com/articles/jfet-design.htm" target="_blank">Designing With JFETs</a> article.&nbsp; These devices are always 'difficult', because of parameter spread.&nbsp; The range of suitable JFETs has also shrunk alarmingly over the past few years, and once common devices are now difficult or impossible to obtain from major suppliers.</p>
+
+<p>The emitter follower is included to ensure a low output impedance, but for a booster only (no tone controls) the output (to C5 etc.) can be taken directly from the drain of the JFET.&nbsp; The disadvantage is that the output impedance is fairly high.&nbsp; With a 3.3k drain resistor, output impedance is 3.3k, which is still low enough to drive a cable with no HF loss.&nbsp; The minimum gain available depends on the setting of TP1, and will around 6dB with a 'typical' J113 FET (although that's potentially misleading because the parameters are so variable).</p>
+
+<p>JFET boosters will generally fall into one of two 'camps'.&nbsp; Some players love the asymmetrical distortion which adds even harmonics (2<sup>nd</sup>, 4<sup>th</sup>, etc.) while others hate it.&nbsp; It's also possible that some players are ambivalent, but that's an uncommon sentiment is the world of guitarists.&nbsp; <img src="./Project 249_files/grin.gif" alt=":-)"></p>
+
+<hr>
+
+<p>The MOSFET approach has a significant disadvantage, especially if you need lots of gain.&nbsp; The gate-source capacitance (C<sub>ISS</sub>) causes the input impedance to fall at high frequencies.&nbsp; This 'feature' isn't shared by JFETs (well, it <i>is</i>, but to a much lesser degree).&nbsp; However, a MOSFET such as the 2N7000 has much higher transconductance (320mS) than a JFET, and can provide far more gain.&nbsp; I was going to include a circuit but decided against it, as my tests showed that the 2N7000 (and its ilk) are just too noisy.</p>
+
+<p>A MOSFET throws up a couple of other complications.&nbsp; To try to get a passably stable <i>positive</i> gate voltage, it's best to allow some feedback from the drain.&nbsp; However, by itself that would apply negative feedback for AC as well as DC, so it needs to be decoupled.&nbsp; To account for parameter spread, a trimpot is required.&nbsp; While the DC feedback does help to stabilise the operating voltages, the parameter spread is such that the feedback alone isn't enough.&nbsp; It would be sufficient with a higher supply voltage, but 9V is rater limiting.&nbsp; There's no real point showing a circuit that is generally unsatisfactory, so I haven't <img src="./Project 249_files/grin.gif">.</p>
+
+<p>All things considered, I don't recommend using a MOSFET.&nbsp; I have tested what I thought was a suitable candidate, and while it works (both on the workbench and in the simulator), it is noisy.&nbsp; You also have to include an input capacitor, as the gate is positive and a direct connection to a guitar will remove most of the bias and it won't work.&nbsp; The MOSFET's gate is very susceptible to damage, so protective diodes are needed (another nuisance).&nbsp; Input impedance is alright, but it falls quite quickly with frequency.</p>
+
+
+<hr><b>Tone Controls</b>
+<p>As noted in the intro, there are several sub-circuits that can be used.&nbsp; One that I would not normally suggest for guitar is a Baxandall circuit.&nbsp; It can be used with a booster because it is an <i>adjunct</i> to the main tone controls, whereas they are generally not favoured for amplifier tone controls.&nbsp; I don't recall ever seeing Baxandall feedback tone controls used in <i>any</i> amplifier that anyone actually liked (unless combined with parametric EQ to obtain the nuances that most players expect from a 'tone stack').&nbsp; As an add-on effect, the feedback tone control is predictable and works well.</p>
+
+<p>The circuits shown both rely on the output capacitor on the booster amplifier to isolate the tone control networks from DC.&nbsp; If you use a different booster, the output capacitor needs to be at least 10µF to ensure proper operation.&nbsp; Many 'stand-alone' boosters have a relatively small output cap, as they are designed to be used with an amplifier with high impedance input(s).&nbsp; A smaller coupling capacitor will compromise the operation of the tone controls.</p>
+
+<p class="t-pic"><img src="./Project 249_files/p249-f4.gif" border="1" alt="Fig 4"><br>Figure 4 - Opamp Tone Control Module</p>
+
+<p>The input signal must be a low impedance, ideally no more than 100Ω.&nbsp; However, a source impedance of up to 1kΩ can be tolerated, but there will be a loss of around 4dB with the controls centred, and the response becomes slightly asymmetrical.&nbsp; The circuits described will mostly have an output impedance of less than 100Ω, so if you mix and match there should be no issues.&nbsp; It should be obvious, but the tone control (if used) will always be the last circuit in the pedal.&nbsp; U1B will typically be the second opamp in the package, with U1A used for the booster</p>
+
+<p>The circuit is completely conventional, except that the pots are 50k instead of the more common 100k.&nbsp; They must be linear - log pots don't work in this configuration.&nbsp; The capacitor values are selected to give a mid-frequency of around 400Hz, which suits guitar well.&nbsp; The bass control provides ±15dB at 30Hz, and treble gives ±16dB at 5kHz.&nbsp; The turnover frequencies are easily changed by changing C1 (bass) and/ or C2 (treble).&nbsp; Note that V<sub>ref</sub> is obtained from the power circuit (Fig. 7).</p>
+
+<hr>
+
+<p>The tone controls will also work with a single transistor, but the range is compromised and distortion performance is not particularly good.&nbsp; While this usually doesn't matter much for guitar, asymmetrical clipping should be avoided if possible, as it reduces the available 'clean' output level.&nbsp; Perhaps surprisingly, a single transistor circuit will use <i>more</i> parts than the opamp version shown.</p>
+
+<p class="t-pic"><img src="./Project 249_files/p249-f5.gif" border="1" alt="Fig 5"><br>Figure 5 - Single Transistor Tone Control</p>
+
+<p>An example circuit is shown above, using the same values as the opamp version.&nbsp; It's performance is not as good as the opamp, and as you can see it really does use more parts.&nbsp; That doesn't mean it's not useful of course, as it may be just what you're after.&nbsp; Unlike the opamp, power supply rejection is poor, so it may be noisy if you use a switchmode 'plug pack' (aka 'wall wart') external power supply.&nbsp; The filter circuit shown in Fig. 7 will help, but switchmode supply noise can be very difficult to filter out.&nbsp; When the tone controls are centred there's a slight loss of signal, but nothing to be concerned about (it's less than 1dB).&nbsp; As with the opamp tone controls, you can change C1 and/ or C2 to change the frequencies.&nbsp; The tone control amp as shown will draw about 1.8mA.</p>
+
+<p class="t-pic"><img src="./Project 249_files/p249-f6.gif" border="1" alt="Fig 6"><br>Figure 6 - Tone Control Response</p>
+
+<p>The frequency response of the tone controls is shown above.&nbsp; The graphs were taken from the opamp version, but the single transistor version is very similar.&nbsp; With the controls centred, there's a slight loss of low frequency response (about 2.5dB) due primarily to the 10μF output cap from the booster stage(s).&nbsp; This is deliberate, as without limiting the extreme bottom-end, there's a risk of generating high amplitude infra-sonic content, which is undesirable.&nbsp; The response peaks at around 30Hz, and rolls off below that.&nbsp; The treble response is also intentionally limited, but it still extends to 20kHz.</p>
+
+<p>The graphs are drawn for 0, 25, 50, 75 and 100% rotation, and the low frequency where the curves converge is done on purpose.&nbsp; Around 400Hz is much better for most musical instruments that the more typical 1kHz, corresponding to 'G' below A440 (which is roughly the physical centre of a full-sized keyboard).&nbsp; Of course, the frequencies can be modified by changing C1 or C2 in either of the tone circuits.&nbsp; Experimentation is encouraged, and you may find cap values that better suit your instrument and/ or playing style.&nbsp; Tone controls can be very personal, so it's worthwhile to experiment to find the combination that works best for you.</p> 
+
+
+<hr><b>DC Input</b>
+<p>The DC input for pedals is something of a pain, because many are designed to use the centre pin for <i>negative</i> rather than positive.&nbsp; This appears to be historical, because when people started making pedals they used PNP germanium transistors, with a positive ground.&nbsp; PNP germanium devices were used because they had better performance than NPN types (this situation was reversed when silicon was adopted as the dominant semiconductor material).</p>
+
+<p>Unfortunately, many DC input sockets have the metal body (which connects to the sleeve of the connector) grounded, so reversal of the input polarity requires the connector to be insulated from the chassis.&nbsp; This is usually harder than it sounds.&nbsp; There isn't any 'standard', so you can easily end up with a mixture of pedals - some with centre-pin positive, others with the centre-pin negative.&nbsp; The circuit below <i>will not</i> blow up if the polarity is reversed because of the input diode, but it won't work until the correct polarity is applied.</p>
+
+<p>My preference is for the <i>positive</i> to be on the centre pin, as almost everything else that uses an external DC supply is wired that way.&nbsp; The DC input voltage can be anything from 9V to 18V.&nbsp; If you use other than 9V, it may be necessary to make adjustments to the circuits shown in Figures 2 and 6 to get optimal performance.&nbsp; The JFET circuit is adjustable, and the available range should be sufficient to set the drain voltages to roughly ½ supply voltage.</p>
+
+<p class="t-pic"><img src="./Project 249_files/p249-f7.gif" border="1" alt="Fig 7"><br>Figure 7 - DC Input &amp; Filtering Circuits</p>
+
+<p>The diodes and filtering shown are required for all variations shown here.&nbsp; The diodes protect against reverse polarity (D1) and stop an external supply from trying to charge the battery (D2).&nbsp; Some DC connectors include a switch to disconnect the battery, but many don't.&nbsp; The diode is easier to install, and there's less likelihood of an error when wiring the connector.&nbsp; The LED and its limiting resistor are optional.&nbsp; The LED should be a high-brightness type, as the current is deliberately limited to about 700µA.</p>
+
+<p>The filter circuit is designed to remove noise from switchmode plug-pack ('wall-wart') supplies.&nbsp; The ferrite bead is optional but recommended - the type suggested is a miniature hollow core of around 5mm long by 4mm diameter.&nbsp; The nomenclature used by suppliers is inconsistent, but the dimensions will help you to find the right one.&nbsp; C2 is a 100nF multilayer ceramic, selected because they have good performance up to very high frequencies.&nbsp; As noted on the drawing, the filter network should be right next to the DC input socket, with <i>very</i> short wiring.&nbsp; C3 (10µF) is located on the Veroboard (or PCB if you make one), and bypasses the supply for the active circuits.&nbsp; This isn't shown on the individual circuits for clarity.</p>
+
+<p>V<sub>ref</sub> (½ supply voltage) is only required if you use opamps, and the two resistors and the capacitor are left out if you use discrete circuitry.&nbsp; The V<sub>ref</sub> supply can handle both opamps in a dual package.&nbsp; It's a fairly high impedance for DC, but C4 ensures that the AC impedance is very low.</p>
+
+<p><b class="t_11b">Beware:&nbsp; </b>Many plug-pack/ wall-wart supplies are very noisy <i>within the audio range</i> when used at low current.&nbsp; The filtering shown may nor be sufficient to remove the noise, which may extend as low as 200Hz.&nbsp; This is caused by the SPMS entering 'skip-cycle' mode at low load so it draws almost no current from the mains.&nbsp; This problem came about due to government regulations demanding very low no-load power (typically 1W, sometimes less than 500mW, occasionally as low as 100mW).&nbsp; The regulators demanded this on the assumption that thousands (or perhaps millions) of supplies were left plugged in 24/7, regardless of whether they were supplying power to an external device.&nbsp; These MEPS (minimum energy performance standards) are worldwide (there are exceptions), and were the cause of the demise of transformer-based 'linear' power supplies.&nbsp; See <a href="https://sound-au.com/articles/small-power-supplies3.htm#s61" target="_blank">Small Power Supplies Part III (section 6.1)</a> for more details on this topic.</p>
+
+
+<hr><b>Bypass</b>
+<p>The circuit for bypass is shown next.&nbsp; It disconnects the electronics completely, so the signal will still get through even if the battery is flat or the external supply is faulty or disconnected.&nbsp; The disadvantage is that the guitar will have a much longer lead (two in series), and this may affect the tone (usually a loss of top-end).&nbsp; A simple buffer can be included between the output switch and output socket, but this will also stop if power is unavailable for any reason.</p>
+
+<p class="t-pic"><img src="./Project 249_files/p249-f8.gif" border="1" alt="Fig 8"><br>Figure 8 - Bypass Switching</p>
+
+<p>This is operated by a DPDT (double-pole, double-throw, aka changeover) foot-switch.&nbsp; These are almost always 'push-on, push-off' types, and are used in countless pedal designs from many different manufacturers.&nbsp; Unfortunately, 3PDT (three-pole) switches are less common, so there's no way to switch an LED to indicate that the pedal is operating.&nbsp; Electronic switching (using a CMOS audio switch for example) will also work, but that adds complexity and it won't bypass with a flat battery or no power.</p>
+
+
+<hr><b>Conclusions</b>
+<p>There are countless different ways to perform EQ for a guitar/ bass booster, but (for example) adding a 3-way parametric gets silly very quickly.&nbsp; You end up with so many knobs to control everything that the pedal becomes far too unwieldy and won't fit most pedal boards.&nbsp; A simple unit with gain, plus extra tone controls to 'help' the amp do what you need is usually quite sufficient.</p>
+
+<p>I've avoided (well, not <i>completely</i>) guitar pedals since the ESP site was started.&nbsp; This isn't because they're not important or popular, but because I always figured that they were well catered-for elsewhere.&nbsp; There are literally thousands of circuits on the Interwebs, but the ideas here are at least capable of working as intended.&nbsp; I will always go for the opamp alternative when possible, because their overall performance is so much better than discrete circuitry, and most require fewer parts.&nbsp; An opamp such as the 4558 draws only around 2.5mA or so (typical), so there's little power saving to be gained with a discrete design (which can often end up drawing more than the opamp).</p>
+
+<p>While my preference would always be for the opamp booster and tone control, not everyone feels the same way.&nbsp; There's also some satisfaction to be gained by building a circuit using discrete transistors, much of which is missing with opamp circuits.&nbsp; Yes, they perform better, but there are some for whom opamps are somehow 'not quite right'.&nbsp; There's no evidence that anyone will pick the difference between a well designed discrete circuit and an opamp in a blind test, but I've provided several solutions to ensure that constructors get the circuitry they prefer.</p>
+
+<p>These circuits are not unique in any way, but they are designs that I know will work properly, and can be mixed and matched to suit your needs.</p>
+
+
+<hr><a id="ref"></a><b>References</b>
+<ol>
+	<li><a href="https://sound-au.com/articles/guitar-voltage.htm" target="_blank">Guitar &amp; Bass Pickup Output Voltages</a>
+	</li><li><a href="https://sound-au.com/no-opamps.htm" target="_blank">Opamp Alternatives</a>
+	</li><li><a href="https://sound-au.com/articles/jfet-design.htm" target="_blank">Designing With JFETs</a>
+</li></ol>
+
+<p>There are no external references, because the circuits are all adapted from other ESP designs, either in projects or articles.</p>
+
+
+<hr>
+<span class="imgswap"><a href="https://sound-au.com/index.html" style="display:block;"><img src="./Project 249_files/a1.gif" alt="Home"><b class="bb">Main Index</b></a></span>
+<span class="imgswap"><a href="https://sound-au.com/projects.html" style="display:block;"><img src="./Project 249_files/a1.gif" alt="projects"><b class="bb">Projects Index</b></a></span>
+<br>
+
+<table class="tblblk" cellpadding="5">
+<tbody><tr><td class="t-wht"><a id="copyright"></a><b>Copyright Notice.</b>&nbsp; This article, including but not limited to all text and diagrams, is the intellectual property of Rod Elliott, and is © 2024.&nbsp; Reproduction or re-publication by any means whatsoever, whether electronic, mechanical or electro-mechanical, is strictly prohibited under International Copyright laws.&nbsp; The author (Rod Elliott) grants the reader the right to use this information for personal use only, and further allows that one (1) copy may be made for reference.&nbsp; Commercial use is prohibited without express written authorisation from Rod Elliott.</td></tr></tbody></table>
+<div class="t-sml">Change Log:&nbsp; Page published and © February 2024.</div><br>
+
+<script type="text/javascript" src="./Project 249_files/addthis_widget.js.download"></script>
+
+
+
+    <style data-type="cookiescriptstyles">
+      #cookiescript_injected {
+    background-color: #1C1C1C;
+    z-index: 999997;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Open Sans', Arial, 'Trebuchet MS', 'Segoe UI', 'Helvetica', sans-serif;
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.35);
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+.cookiescript_checkbox_label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding:0 4px;
+    line-height: 1.5;
+    margin:0;
+	text-align: left;
+}
+.cookiescript_pre_header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+#cookiescript_close {
+    font-size: 29px;
+    line-height: 13px;
+    cursor: pointer;
+    color: #FFFFFF;
+    height: 15px;
+    width: 15px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    overflow: hidden;
+    letter-spacing: 0;
+    font-family: 'Trebuchet MS', 'Arial', sans-serif;
+    font-weight: 100;
+    opacity: 0.85;
+    z-index: 999999;
+    position: relative;
+    top: -1px;
+}
+
+#cookiescript_buttons {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+#cookiescript_manage_wrap {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+}
+#cookiescript_manage {
+    display: inline;
+    cursor: pointer;
+    color: #FFFFFF;
+    opacity:0.85;
+    margin-left:-15px;
+}
+#cookiescript_manage #cookiescript_manageicon .cookiescript_gear {
+    fill: #FFFFFF;
+}
+#cookiescript_manage:hover #cookiescript_manageicon .cookiescript_gear {
+    fill: #6BBE6B;;
+}
+
+svg#cookiescript_manageicon {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin: 0 5px 0 0;
+    padding: 0;
+    position: relative;
+    top: 3px;
+    vertical-align: baseline;
+}
+#cookiescript_header {
+    background-color: transparent;
+    z-index: 999998;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    opacity:1;
+}
+.cookiescript_checkbox {
+    display: flex;
+    flex-direction: row;
+}
+input.cookiescript_checkbox_input {
+}
+span.cookiescript_checkbox_text {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+#cookiescript_save {
+    border: 0;
+    transition: all 0.25s ease 0s;
+    background-color: #6BBE6B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    line-height: 3.2;
+    letter-spacing: 0.4px;
+}
+/*IE 9 fixes*/
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+    .cookiescript_checkbox_label {
+        position: relative;
+        top:-10px;
+    }
+    #cookiescript_accept, #cookiescript_reject, #cookiescript_save{
+    	display: inline-block;
+    }
+    #cookiescript_buttons{
+    	text-align:center;
+    }
+}
+#cookiescript_save{
+    display: none;
+}
+#cookiescript_reject {
+    border: 1px solid #FFFFFF;
+    text-align: center;
+    line-height: 3;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    background: #1C1C1C;
+}
+#cookiescript_accept {
+	transition: all 0.25s ease 0s;
+	text-transform: uppercase;
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 0.4px;
+	border: 0;
+	background-color: #6BBE6B;
+	color: #FFFFFF;
+	line-height: 3.2;
+}
+
+#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+    min-width: 103px;
+}
+.cookiescript_bigger {
+    transform: scale(1.1);
+}
+#cookiescript_link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 11px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.8;
+	display:inline !important;
+}
+
+#cookiescript_readmore,
+#cookiescript_reportlink,
+#cookiescript_cookiescriptlink {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+    transition: all 100ms ease 0s;
+    background-color: transparent;
+    display: inline;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#cookiescript_readmore{
+    color: #FFFFFF;
+}
+#cookiescript_reportlink,
+#cookiescript_cookiescriptlink {
+    color: #FFFFFF;
+}
+
+
+#cookiescript_readmore:hover,
+#cookiescript_reportlink:hover,
+#cookiescript_cookiescriptlink:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+
+}
+
+#cookiescript_description {
+    color: #FFFFFF;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    line-height: 1.65;
+    font-weight: 400;
+}
+#cookiescript_checkboxs {
+}
+#cookiescript_close:hover,
+#cookiescript_manage:hover,
+#cookiescript_link:hover
+{
+    opacity: 1;
+}
+
+#cookiescript_reject:hover {
+    background-color: #2f2f2f;
+}
+
+#cookiescript_accept:hover{
+	background-color: #63af63;
+}
+#cookiescript_save:hover {
+    background-color: #63af63;
+}
+
+#cookiescript_readmore:hover,
+#cookiescript_reportlink:hover,
+#cookiescript_cookiescriptlink:hover
+{
+    color: #63af63;
+}
+
+#cookiescript_badge {
+    position: fixed;
+    line-height: 0;
+    cursor: pointer;
+    z-index: 99999;
+    font-size: 0;
+    color: #999;
+left: 10px;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+}
+
+#cookiescript_badgetext{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Open Sans', Arial, 'Trebuchet MS', 'Segoe UI', 'Helvetica', sans-serif;
+    overflow: hidden;
+    transition-duration: 500ms;
+    white-space: nowrap;
+    padding-right: 0;
+    color: #FFFFFF;
+}
+
+#cookiescript_badgesvg{
+    width:40px;
+    height: 40px;
+}
+
+
+
+#cookiescript_badge {
+bottom: 10px;
+    border-radius:25px;
+    padding:3px;
+    transition-duration: 500ms;
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    background: #1C1C1C;
+}
+#cookiescript_badge:hover #cookiescript_badgetext{
+    max-width: 300px;
+    padding-right: 15px;
+    padding-left: 12px;
+}
+#cookiescript_badgetext {
+    font-size: 16px;
+    line-height: 2.5;
+    max-width: 0;
+}
+#cookiescript_badgeimage {
+    width: 40px;
+    height: 40px;
+}
+@media only screen and (max-width: 414px) {
+    #cookiescript_badgeimage {
+        width: 30px;
+        height: 30px;
+    }
+    #cookiescript_badgesvg{
+        width:30px;
+        height: 30px;
+    }
+    #cookiescript_badgetext{
+        display: none;
+    }
+}
+/*IE 9 fixes*/
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+	#cookiescript_badgeimage{
+    	float:left;
+    }
+}
+
+@media print{
+    #cookiescript_injected{
+        display:none;
+    }
+}
+
+
+
+
+#cookiescript_injected_fsd {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.5) !important;
+    z-index: 999996;
+	overflow-y: auto;
+}
+
+#cookiescript_fsd_wrapper {
+    /*animation: expandBox 2s forwards;*/
+    max-width: 950px;
+	width: 95%;
+    margin: 0 auto 3% auto;
+	top: 5%;
+    line-height: 18px;
+    letter-spacing: normal;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+	background-color: #f3f3f3;
+    z-index: 999997;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Open Sans', Arial, 'Trebuchet MS', 'Segoe UI', 'Helvetica', sans-serif;
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.35);
+    color: #1C1C1C;
+    align-items: center;
+    overflow: visible;
+    outline: none;
+    max-height: 90%;
+    box-sizing: border-box;
+	cursor: default;
+	min-height: 500px;
+}
+@keyframes expandBox {
+    from {
+        width: 10%;
+        margin-left:0;
+        overflow: hidden;
+        top:90%;
+        height: 5%;
+    }
+    to {
+        width: 95%;
+        margin-left:auto;
+        overflow: hidden;
+        top:5%;
+        height: 90%;
+    }
+}
+
+.cookiescript_fsd_header {
+	min-height: 57px;
+	border-bottom: 1px solid #e2e2e2;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #ffffff;
+}
+.cookiescript_fsd_logo_a{
+	margin-left: 23px;
+    text-decoration: none;
+}
+.cookiescript_fsd_logo{
+	height: 27px;
+	width: auto;
+	display: block;
+	max-width: 100%;
+}
+.cookiescript_fsd_powered {
+    color: #666666;
+    font-size: 11px;
+    position: relative;
+    left: 31px;
+    top: 0;
+    line-height: 1;
+    text-decoration: none;
+    display: block;
+    height: 8px;
+}
+.cookiescript_fsd_language_drop_down {
+    position: absolute;
+    right: 67px;
+	top: 19px;
+}
+
+.cookiescript_fsd_main {
+    width: 100%;
+	background-color: #ffffff;
+}
+
+.cookiescript_fsd_main_info {
+    padding: 20px 53px 30px 53px;
+    }
+
+.cookiescript_fsd_title {
+    background-color: transparent;
+    z-index: 999998;
+    color: #1C1C1C;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+    opacity:1;
+}
+
+.cookiescript_fsd_description {
+    color: #1C1C1C;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    opacity: 0.85;
+	margin-top: 9px;
+}
+
+
+#cookiescript_fsd_wrapper #cookiescript_readmore{
+	font-size: 13px;
+	color: #3fb6ee;
+	text-decoration: none;
+}
+#cookiescript_fsd_wrapper #cookiescript_readmore:hover{
+	text-decoration: underline;
+}
+
+.cookiescript_fsd_tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+	flex-direction: row;
+    width: 100%;
+}
+
+.cookiescript_fsd_tabs > div {
+	cursor: pointer;
+	width: 50%;
+	text-transform: uppercase;
+	font-size: 16px;
+	text-align: center;
+	line-height: 1.6;
+	font-weight: bold;
+	border-top: 2px solid transparent;
+	transition: all 300ms ease 0s;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff;
+}
+
+.cookiescript_fsd_tabs > .cookiescript_active {
+    border-top: 2px solid #3fb6ee;
+    background-color: #f3f3f3;
+    color: #3fb6ee;
+}
+
+.cookiescript_fsd_tabs_content {
+    background-color: #f3f3f3;
+    padding: 5px 50px 10px 50px;
+    width: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    flex-grow: 1;
+	--scrollbar-width: 8px;
+	--mask-height: 35px;
+	--mask-image-content: linear-gradient( to bottom, transparent, black var(--mask-height), black calc(100% - var(--mask-height)), transparent );
+	--mask-size-content: calc(100% - var(--scrollbar-width)) 100%;
+	--mask-image-scrollbar: linear-gradient(black, black);
+	--mask-size-scrollbar: var(--scrollbar-width) 100%;
+	mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+	mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+	mask-position: 0 0, 100% 0;
+	mask-repeat: no-repeat, no-repeat;
+	-webkit-mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+	-webkit-mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+	-webkit-mask-position: 0 0, 100% 0;
+	-webkit-mask-repeat: no-repeat, no-repeat;
+}
+
+.cookiescript_fsd_tabs_content .cookiescript_hidden {
+    opacity: 0;
+    height: 0 !important;
+    overflow: hidden;
+	padding: 0 !important;
+	min-height: 0 !important;
+}
+
+.cookiescript_fsd_category {
+    border-bottom: 1px solid #e2e2e2;
+    padding-top: 23px;
+    padding-bottom: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cookiescript_fsd_category:last-child {
+    border-bottom: 0;
+}
+
+.cookiescript_fsd_category .cookiescript_hidden {
+    opacity: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0 !important;
+	max-height: 0;
+	margin: 0;
+	height: auto !important;
+		transition: max-height 300ms ease 200ms, opacity ease 200ms, margin-top 100ms ease 100ms;
+	}
+
+.cookiescript_fsd_category_main {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cookiescript_fsd_category_info {
+    flex: 9;
+    padding-right: 10px;
+}
+
+.cookiescript_fsd_category_control {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.cookiescript_fsd__category_name {
+    font-size: 16px;
+    font-weight: 700;
+	margin-bottom: 6px;
+}
+
+.cookiescript_category_description {
+	font-size: 13px;
+	padding-bottom: 5px;
+	line-height: 1.6;
+}
+
+.cookiescript_fsd_cookies {
+	border: 1px solid #e2e2e2;
+	border-radius: 10px;
+	overflow-y: auto;
+	margin-top: 15px;
+	max-height: 222px;
+		transition: max-height 300ms ease, opacity 200ms ease 300ms, margin-top 100ms ease 100ms;
+	}
+
+.cookiescript_fsd_cookies caption {
+    font-weight: 600;
+    padding: 10px;
+    text-align: left;
+    color: #1C1C1C;
+    caption-side: top;
+}
+
+
+.cookiescript_fsd_cookies_control {
+    color: #3fb6ee;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cookiescript_fsd_cookies_control .cookiescript_hidden {
+    display: none;
+}
+
+.cookiescript_fsd_cookies_control  span{
+	margin-right: 7px;
+}
+
+.cookiescript_fsd_cookies_control svg {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+}
+
+.cookiescript_fsd_cookies_control.active svg {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    transform: rotate(180deg);
+}
+
+.cookiescript_fsd_cookies_table {
+    width: 100%;
+}
+
+.cookiescript_fsd_cookies_table,
+.cookiescript_fsd_cookies_table tbody,
+.cookiescript_fsd_cookies_table thead,
+.cookiescript_fsd_cookies_table tr,
+.cookiescript_fsd_cookies_table th,
+.cookiescript_fsd_cookies_table td {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    vertical-align: baseline;
+    background-color: #ffffff;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+.cookiescript_fsd_cookies_table tr:last-child td{
+    border-bottom: 0;
+}
+
+.cookiescript_fsd_cookies_table td, .cookiescript_fsd_cookies_table th {
+    white-space: normal;
+    font-size: 13px;
+    text-align: left;
+    margin: 0;
+}
+.cookiescript_fsd_cookies_table th {
+	font-weight: 600;
+	padding: 8px 8px;
+	line-height: 1.4;
+	word-break: keep-all;
+	vertical-align: middle;
+}
+
+.cookiescript_fsd_cookies_table td {
+	padding: 7px 8px;
+	line-height: 1.6;
+	vertical-align: top;
+	font-weight: 400;
+	border: 0;
+	border-top: 1px solid #e2e2e2;
+	color: #1C1C1C;
+}
+
+.cookiescript_fsd_cookies_table th:last-child {
+    padding-right: 10px;
+}
+
+    .cookiescript_fsd_cookies_table td:nth-child(1), .cookiescript_fsd_cookies_table th:nth-child(1) {
+    padding-left: 15px;
+    word-break: normal;
+}
+
+.cookiescript_fsd_cookies_table td:nth-child(2) {
+    color: #3fb6ee;
+}
+
+.cookiescript_fsd_cookies_table td:nth-child(3), .cookiescript_fsd_cookies_table th:nth-child(3) {
+    text-align: center;
+}
+
+.cookiescript_fsd_cookies_table.cookiescript_fsd_storage_table td:nth-child(2) {
+     color: #1C1C1C;
+}
+
+.cookiescript_vendor_name a{
+	text-decoration: underline;
+	font-weight: bold;
+	color: #3fb6ee;
+	line-height: normal;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	font-size: 13px;
+}
+.cookiescript_vendor_name a:hover {
+	text-decoration: underline;
+	color: #3fb6ee;
+}
+
+.cookiescript_fsd_footer {
+    border-top: 1px solid #e2e2e2;
+    width: 100%;
+	background-color: #ffffff;
+    position: relative;
+}
+#cookiescript_fsd_wrapper #cookiescript_declarationwrap{
+		transition: opacity 200ms ease 0ms, height 0ms ease 200ms;
+	}
+#cookiescript_fsd_wrapper #cookiescript_aboutwrap{
+	font-size: 13px;
+	padding: 23px 0;
+	line-height: 1.6;
+	text-align: left;
+	font-weight: normal;
+	box-sizing: border-box;
+	transition: opacity 200ms ease 0ms;
+	overflow: auto;
+	min-height: 181px;
+}
+#cookiescript_fsd_wrapper #cookiescript_aboutwrap a,
+#cookiescript_fsd_wrapper #cookiescript_aboutwrap a:hover{
+    color: #3fb6ee;
+    text-decoration: underline;
+}
+
+#cookiescript_setting_advertising_wrap {
+    font-size: 12px;
+}
+
+#cookiescript_iab_type {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e2e2;
+    flex-wrap: wrap;
+}
+
+#cookiescript_iab_type > div {
+    cursor: pointer;
+    padding: 0 9px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #f5f5f5;
+    color: #1C1C1C;
+    line-height: 2;
+    margin: 3px 5px;
+    white-space: nowrap;
+}
+
+#cookiescript_iab_type .cookiescript_active {
+    background: #3fb6ee;
+    color: #FEFEFE;
+}
+
+
+.cookiescript_fsd_cookies::-webkit-scrollbar-track,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar-track {
+    background-color: #DADADA;
+}
+
+.cookiescript_fsd_cookies::-webkit-scrollbar,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.cookiescript_fsd_cookies::-webkit-scrollbar-thumb,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar-thumb {
+    background-color: #6BBE6B;
+}
+
+
+
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+    #cookiescript_iab_type > div{
+        display:inline-block;
+    }
+}
+
+/* --- OVERRIDE ----*/
+
+#cookiescript_injected_fsd #cookiescript_close {
+	top: 20px;
+	font-size: 37px;
+	right: 20px;
+	color: #1C1C1C;
+	height: 18px;
+	width: 18px;
+    position: absolute;
+    margin:0;
+}
+
+#cookiescript_injected_fsd #cookiescript_show_all_partners_button {
+    color: #3fb6ee;
+    margin-bottom: 0;
+    margin-top: 12px;
+    display: inline-block;
+}
+
+#cookiescript_injected_fsd #cookiescript_buttons {
+    justify-content: flex-start;
+    padding: 5px 15px;
+    margin: 0;
+}
+
+#cookiescript_injected_fsd #cookiescript_accept, #cookiescript_injected_fsd #cookiescript_save, #cookiescript_injected_fsd #cookiescript_reject {
+		flex-grow: unset;
+		padding: 0px 25px;
+	margin: 10px 5px;
+	font-size: 13px;
+	line-height: 3;
+}
+#cookiescript_injected_fsd #cookiescript_buttons{
+	flex-direction: row;
+}
+#cookiescript_injected_fsd #cookiescript_buttons #cookiescript_reject {
+    margin-right: auto;
+}
+
+#cookiescript_injected_fsd .cookiescript-iab-itemContainer {
+    border: 1px solid #e2e2e2;
+	background-color: #ffffff;
+	padding: 10px;
+}
+
+#cookiescript_injected_fsd .cookiescript-iab-header,
+#cookiescript_injected_fsd .cookiescript-iab-itemHeader,
+#cookiescript_injected_fsd .cookiescript-iab-itemHeaderAction {
+    color: #1C1C1C;
+}
+
+#cookiescript_injected_fsd .cookiescript-iab-itemHeaderAction {
+    border-color: #1C1C1C;
+}
+
+#cookiescript_injected_fsd #cookiescript_accept {
+    background-color: #ffffff;
+    color: #4d4d4d;
+    border: 1px solid #4d4d4d;
+    order: 1}
+
+#cookiescript_injected_fsd #cookiescript_accept:hover {
+    background-color: #ebebeb;
+}
+
+#cookiescript_injected_fsd #cookiescript_reject {
+    background-color: #ffffff;
+    color: #4d4d4d;
+    border: 1px solid #4d4d4d;
+    order: 2}
+
+#cookiescript_injected_fsd #cookiescript_reject:hover {
+    background-color: #ebebeb;
+}
+
+#cookiescript_injected_fsd #cookiescript_save {
+    display: inline-block;
+    background-color: #6BBE6B;
+    color: #ffffff;
+    border: 1px solid #6BBE6B;
+    order: 3}
+
+#cookiescript_injected_fsd #cookiescript_save:hover {
+    background-color: #63af63;
+}
+.cookiescript_fsd_reportby{
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    color: #FFFFFF;
+    display: inline;
+    font-size: 13px;
+}
+#cookiescript_fsd_reportlink, #cookiescript_fsd_cookiescriptlink {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+    transition: all 100ms ease 0s;
+    background-color: transparent;
+    color: #FFFFFF;
+    display: inline;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/*Switches color reload*/
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled .mdc-switch__handle::after {
+    background: #6BBE6B;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after {
+    background: #68b968;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus:not(:active) .mdc-switch__handle::after {
+    background: #68b968;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__handle::after {
+    background: #68b968;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::before,
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::after{
+    background: #6BBE6B;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::before,
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::after {
+    background: #6BBE6B;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::before,
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::after {
+    background: #6BBE6B;
+}
+
+#cookiescript_injected_fsd .mdc-switch:enabled .mdc-switch__track::after {
+    background: #6BBE6B;
+    opacity: 0.3;
+}
+
+#cookiescript_injected_fsd .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::after {
+    background: #6BBE6B;
+    opacity: 0.3;
+}
+
+#cookiescript_injected_fsd .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::after {
+    background: #6BBE6B;
+    opacity: 0.3;
+}
+
+#cookiescript_injected_fsd .mdc-switch:enabled:active .mdc-switch__track::after {
+    background: #6BBE6B;
+    opacity: 0.3;
+}
+
+
+#cookiescript_fsd_wrapper {
+    border-radius: 25px;
+}
+.cookiescript_fsd_header {
+    border-radius: 25px 25px 0 0;
+}
+.cookiescript_fsd_footer {
+    border-radius: 0 0 25px 25px;
+}
+#cookiescript_iab_type > div {
+    border-radius: 25px;
+}
+.cookiescript_fsd_cookies::-webkit-scrollbar-track,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar-track
+#cookiescript_iabwrap::-webkit-scrollbar-thumb,
+#cookiescript_aboutwrap::-webkit-scrollbar-thumb{
+    border-radius: 6px;
+}
+.cookiescript_fsd_cookies::-webkit-scrollbar-thumb,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar-thumb,
+#cookiescript_iabwrap::-webkit-scrollbar-thumb,
+#cookiescript_aboutwrap::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+}
+#cookiescript_injected_fsd #cookiescript_accept,
+#cookiescript_injected_fsd #cookiescript_save,
+#cookiescript_injected_fsd #cookiescript_reject{
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 414px) {
+    .cookiescript_fsd_header {
+        border-radius: 0;
+    }
+    .cookiescript_fsd_footer {
+        border-radius: 0;
+    }
+}
+@media only screen and (max-width: 414px) {
+	#cookiescript_fsd_wrapper {
+		width: 100%;
+		height: 100%;
+		max-height: 100%;
+		top: 0;
+		border-radius: 0;
+		margin: 0;
+	}
+
+	.cookiescript_fsd_main_info {
+		padding: 13px 20px;
+		overflow-y: auto;
+		max-height: 140px;
+	}
+	.cookiescript_fsd_description{
+		margin-top: 8px;
+	}
+	.cookiescript_fsd_tabs > div {
+		padding: 6px;
+		font-size: 12px;
+	}
+
+	.cookiescript_fsd_tabs_content {
+		padding: 5px 20px 10px 20px;
+	}
+
+	.cookiescript_fsd_cookies_table thead {
+		display: none;
+	}
+
+	.cookiescript_fsd_cookies_table td {
+		display: flex;
+		border-bottom: 0px;
+	}
+
+	.cookiescript_fsd_cookies_table tr td:last-child {
+		border-bottom: 0;
+	}
+
+	.cookiescript_fsd_cookies_table td {
+		border-top: 0;
+	}
+
+	.cookiescript_fsd_cookies_table td::before {
+		content: attr(label);
+		font-weight: bold;
+		width: 120px;
+		min-width: 120px;
+		text-align: left;
+	}
+
+	.cookiescript_fsd_cookies_table td:nth-child(2):before {
+		color: #1C1C1C;
+	}
+
+	.cookiescript_category_description {
+		text-align: left;
+	}
+
+	.cookiescript_fsd_cookies_table td:nth-child(1),
+	.cookiescript_fsd_cookies_table th:nth-child(1) {
+		padding-left: 7px;
+		font-weight: bold;
+		border-top: 1px solid #e2e2e2;
+	}
+
+	.cookiescript_fsd_cookies_table tr:nth-child(1) td:nth-child(1),
+	.cookiescript_fsd_cookies_table tr:nth-child(1) th:nth-child(1) {
+		border-top: 0px;
+	}
+
+	.cookiescript_fsd_cookies_table td:last-child {
+		border-bottom: none;
+	}
+
+	.cookiescript_fsd_cookies_table tr:nth-child(even) {
+		background: #f5f5f5;
+	}
+
+	.cookiescript_fsd_cookies_table tr:nth-child(even) td {
+		border-bottom: 0px solid #FFF;
+	}
+
+	#cookiescript_injected_fsd #cookiescript_buttons {
+		margin-bottom: 0;
+	}
+
+	#cookiescript_injected_fsd #cookiescript_buttons #cookiescript_accept,
+	#cookiescript_injected_fsd #cookiescript_buttons #cookiescript_save,
+	#cookiescript_injected_fsd #cookiescript_buttons #cookiescript_reject {
+		flex-grow: 1;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding: 0 15px;
+	}
+
+	.cookiescript_fsd_language_drop_down {
+		right: 40px;
+	}
+
+	#cookiescript_injected_fsd #cookiescript_close{
+		right:14px;
+	}
+    .cookiescript_fsd_reportby {
+        position: relative;
+        bottom: 0;
+        right: auto;
+        color: #1C1C1C;
+        font-size: 12px;
+        padding: 0 20px 10px 21px;
+        max-width: 100%;
+        opacity: 0.8;
+        display: none;
+    }
+    #cookiescript_fsd_reportlink, #cookiescript_fsd_cookiescriptlink{
+        color: #1C1C1C;
+        font-size: 12px;
+    }
+
+}
+
+
+
+
+
+.cookiescript_rtl {
+    direction:rtl;
+}
+
+/*Start Checkboxes*/
+#cookiescript_injected_fsd .mdc-checkbox,
+#cookiescript_injected .mdc-checkbox {
+    box-sizing: content-box !important;
+}
+#cookiescript_injected_fsd .mdc-checkbox__native-control,
+#cookiescript_injected .mdc-checkbox__native-control {
+    display: block;
+    z-index: 1;
+}
+#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before, 
+#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before, 
+#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before,
+#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before {
+    background-color: #FFFFFF;
+}
+#cookiescript_injected .mdc-checkbox,#cookiescript_injected_fsd .mdc-checkbox{display:inline-block;position:relative;flex:0 0 18px;box-sizing:content-box;width:18px;height:18px;line-height:0;white-space:nowrap;cursor:pointer;vertical-align:bottom;padding:11px}#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before{background-color:#FFFFFF}@supports not (-ms-ime-align:auto){#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before{background-color:var(--mdc-theme-secondary, #FFFFFF)}}#cookiescript_injected .mdc-checkbox .mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__background{top:11px;left:11px}#cookiescript_injected .mdc-checkbox .mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__background::before{top:-13px;left:-13px;width:40px;height:40px}#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control{top:0;right:0;left:0;width:40px;height:40px}#cookiescript_injected .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~.mdc-checkbox__background{border-color:#FFFFFF;background-color:transparent}#cookiescript_injected .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,#cookiescript_injected .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background{border-color:#FFFFFF;background-color:#FFFFFF}#cookiescript_injected .mdc-checkbox__native-control[disabled]:not(:checked):not(:indeterminate)~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control[disabled]:not(:checked):not(:indeterminate)~.mdc-checkbox__background{border-color:rgba(255,255,255,0.26);background-color:transparent}#cookiescript_injected .mdc-checkbox__native-control[disabled]:checked~.mdc-checkbox__background,#cookiescript_injected .mdc-checkbox__native-control[disabled]:indeterminate~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control[disabled]:checked~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control[disabled]:indeterminate~.mdc-checkbox__background{border-color:transparent;background-color:rgba(255,255,255,0.26)}#cookiescript_injected .mdc-checkbox__native-control:enabled~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled~.mdc-checkbox__background .mdc-checkbox__checkmark{color:#1C1C1C}#cookiescript_injected .mdc-checkbox__native-control:disabled~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:disabled~.mdc-checkbox__background .mdc-checkbox__checkmark{color:#1C1C1C}#cookiescript_injected .mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__background{display:inline-flex;position:absolute;align-items:center;justify-content:center;box-sizing:border-box;width:18px;height:18px;border:2px solid #FFFFFF;border-radius:2px;background-color:transparent;pointer-events:none;will-change:background-color,border-color;transition:background-color 90ms 0s cubic-bezier(.4,0,.6,1),border-color 90ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox__background .mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox__background .mdc-checkbox__background::before{background-color:#000}@supports not (-ms-ime-align:auto){#cookiescript_injected .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__checkmark{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;opacity:0;transition:opacity 180ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox__checkmark-path,#cookiescript_injected_fsd .mdc-checkbox__checkmark-path{transition:stroke-dashoffset 180ms 0s cubic-bezier(.4,0,.6,1);stroke:currentColor;stroke-width:3.12px;stroke-dashoffset:29.7833385;stroke-dasharray:29.7833385}#cookiescript_injected .mdc-checkbox__native-control:checked~.mdc-checkbox__background,#cookiescript_injected .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:checked~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{transition:border-color 90ms 0s cubic-bezier(0,0,.2,1),background-color 90ms 0s cubic-bezier(0,0,.2,1)}#cookiescript_injected .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark-path,#cookiescript_injected .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark-path,#cookiescript_injected_fsd .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark-path,#cookiescript_injected_fsd .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark-path{stroke-dashoffset:0}#cookiescript_injected .mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox__background::before{position:absolute;-webkit-transform:scale(0,0);transform:scale(0,0);border-radius:50%;opacity:0;pointer-events:none;content:"";will-change:opacity,transform;transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before{-webkit-transform:scale(1);transform:scale(1);opacity:.12;transition:opacity 80ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 80ms 0s cubic-bezier(0,0,.2,1);transition:opacity 80ms 0s cubic-bezier(0,0,.2,1),transform 80ms 0s cubic-bezier(0,0,.2,1);transition:opacity 80ms 0s cubic-bezier(0,0,.2,1),transform 80ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 80ms 0s cubic-bezier(0,0,.2,1)}#cookiescript_injected .mdc-checkbox__native-control,#cookiescript_injected_fsd .mdc-checkbox__native-control{position:absolute;margin:0;padding:0;opacity:0;cursor:inherit}#cookiescript_injected .mdc-checkbox__native-control:disabled,#cookiescript_injected_fsd .mdc-checkbox__native-control:disabled{cursor:default;pointer-events:none}#cookiescript_injected .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark{transition:opacity 180ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 180ms 0s cubic-bezier(0,0,.2,1);transition:opacity 180ms 0s cubic-bezier(0,0,.2,1),transform 180ms 0s cubic-bezier(0,0,.2,1);transition:opacity 180ms 0s cubic-bezier(0,0,.2,1),transform 180ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 180ms 0s cubic-bezier(0,0,.2,1);opacity:1}#cookiescript_injected .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark{-webkit-transform:rotate(45deg);transform:rotate(45deg);opacity:0;transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox,#cookiescript_injected_fsd .mdc-checkbox{-webkit-tap-highlight-color:transparent}}
+/*End Checkboxes*/
+
+
+/*Start Toggle*/
+
+#cookiescript_injected .mdc-elevation-overlay,#cookiescript_injected_fsd .mdc-elevation-overlay{position:absolute;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity 280ms cubic-bezier(.4,0,.2,1);background-color:#fff}#cookiescript_injected .mdc-switch,#cookiescript_injected_fsd .mdc-switch{align-items:center;background:0 0;border:none;cursor:pointer;display:inline-flex;flex-shrink:0;margin:0;outline:0;overflow:visible;padding:0;position:relative}#cookiescript_injected .mdc-switch:disabled,#cookiescript_injected_fsd .mdc-switch:disabled{cursor:default;pointer-events:none}#cookiescript_injected .mdc-switch input[type=checkbox],#cookiescript_injected_fsd .mdc-switch input[type=checkbox]{display:none;visibility:hidden}#cookiescript_injected .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch__track{overflow:hidden;position:relative;width:100%}#cookiescript_injected .mdc-switch__track::after,#cookiescript_injected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch__track::before{border:1px solid transparent;border-radius:inherit;box-sizing:border-box;content:"";height:100%;left:0;position:absolute;width:100%}#cookiescript_injected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch__track::before{transition:-webkit-transform 75ms 0s cubic-bezier(0,0,.2,1);transition:transform 75ms 0s cubic-bezier(0,0,.2,1);-webkit-transform:translateX(0);transform:translateX(0)}#cookiescript_injected .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch__track::after{transition:-webkit-transform 75ms 0s cubic-bezier(.4,0,.6,1);transition:transform 75ms 0s cubic-bezier(.4,0,.6,1);-webkit-transform:translateX(-100%);transform:translateX(-100%)}#cookiescript_injected .mdc-switch__track[dir=rtl]::after,#cookiescript_injected [dir=rtl] .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch__track[dir=rtl]::after,#cookiescript_injected_fsd [dir=rtl] .mdc-switch__track::after{-webkit-transform:translateX(100%);transform:translateX(100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__track::before{transition:-webkit-transform 75ms 0s cubic-bezier(.4,0,.6,1);transition:transform 75ms 0s cubic-bezier(.4,0,.6,1);-webkit-transform:translateX(100%);transform:translateX(100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__track[dir=rtl]::before,#cookiescript_injected [dir=rtl] .mdc-switch--selected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__track[dir=rtl]::before,#cookiescript_injected_fsd [dir=rtl] .mdc-switch--selected .mdc-switch__track::before{-webkit-transform:translateX(-100%);transform:translateX(-100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__track::after{transition:-webkit-transform 75ms 0s cubic-bezier(0,0,.2,1);transition:transform 75ms 0s cubic-bezier(0,0,.2,1);-webkit-transform:translateX(0);transform:translateX(0)}#cookiescript_injected .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch__handle-track{height:100%;pointer-events:none;position:absolute;top:0;transition:-webkit-transform 75ms 0s cubic-bezier(.4,0,.2,1);transition:transform 75ms 0s cubic-bezier(.4,0,.2,1);left:0;right:auto;-webkit-transform:translateX(0);transform:translateX(0)}#cookiescript_injected .mdc-switch__handle-track[dir=rtl],#cookiescript_injected [dir=rtl] .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch__handle-track[dir=rtl],#cookiescript_injected_fsd [dir=rtl] .mdc-switch__handle-track{left:auto;right:0}#cookiescript_injected .mdc-switch--selected .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__handle-track{-webkit-transform:translateX(100%);transform:translateX(100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__handle-track[dir=rtl],#cookiescript_injected [dir=rtl] .mdc-switch--selected .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__handle-track[dir=rtl],#cookiescript_injected_fsd [dir=rtl] .mdc-switch--selected .mdc-switch__handle-track{-webkit-transform:translateX(-100%);transform:translateX(-100%)}#cookiescript_injected .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch__handle{display:flex;pointer-events:auto;position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:0;right:auto}#cookiescript_injected .mdc-switch__handle[dir=rtl],#cookiescript_injected [dir=rtl] .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch__handle[dir=rtl],#cookiescript_injected_fsd [dir=rtl] .mdc-switch__handle{left:auto;right:0}#cookiescript_injected .mdc-switch__handle::after,#cookiescript_injected .mdc-switch__handle::before,#cookiescript_injected_fsd .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch__handle::before{border:1px solid transparent;border-radius:inherit;box-sizing:border-box;content:"";width:100%;height:100%;left:0;position:absolute;top:0;transition:background-color 75ms 0s cubic-bezier(.4,0,.2,1),border-color 75ms 0s cubic-bezier(.4,0,.2,1);z-index:-1}#cookiescript_injected .mdc-switch__shadow,#cookiescript_injected_fsd .mdc-switch__shadow{border-radius:inherit;bottom:0;left:0;position:absolute;right:0;top:0}#cookiescript_injected .mdc-elevation-overlay,#cookiescript_injected_fsd .mdc-elevation-overlay{bottom:0;left:0;right:0;top:0}#cookiescript_injected .mdc-switch__ripple,#cookiescript_injected_fsd .mdc-switch__ripple{left:50%;position:absolute;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:-1}#cookiescript_injected .mdc-switch:disabled .mdc-switch__ripple,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__ripple{display:none}#cookiescript_injected .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch__icons{height:100%;position:relative;width:100%;z-index:1}#cookiescript_injected .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch__icon{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;opacity:0;transition:opacity 30ms 0s cubic-bezier(.4,0,1,1)}#cookiescript_injected .mdc-switch--selected .mdc-switch__icon--on,#cookiescript_injected .mdc-switch--unselected .mdc-switch__icon--off,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__icon--on,#cookiescript_injected_fsd .mdc-switch--unselected .mdc-switch__icon--off{opacity:1;transition:opacity 45ms 30ms cubic-bezier(0,0,.2,1)}#cookiescript_injected .mdc-switch,#cookiescript_injected_fsd .mdc-switch{will-change:transform,opacity}@-webkit-keyframes mdc-ripple-fg-radius-in{from{-webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);animation-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}to{-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}}@keyframes mdc-ripple-fg-radius-in{from{-webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);animation-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}to{-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}}@-webkit-keyframes mdc-ripple-fg-opacity-in{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:0}to{opacity:.1}}@keyframes mdc-ripple-fg-opacity-in{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:0}to{opacity:.1}}@-webkit-keyframes mdc-ripple-fg-opacity-out{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:.1}to{opacity:0}}@keyframes mdc-ripple-fg-opacity-out{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:.1}to{opacity:0}}#cookiescript_injected .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::before{position:absolute;border-radius:50%;opacity:0;pointer-events:none;content:""}#cookiescript_injected .mdc-switch .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::before{transition:opacity 15ms linear,background-color 15ms linear;z-index:1}#cookiescript_injected .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::after{z-index:0}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before{-webkit-transform:scale(1);transform:scale(1)}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after{top:0;left:0;-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:center center;transform-origin:center center}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded--unbounded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded--unbounded .mdc-switch__ripple::after{top:0;left:0}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded--foreground-activation .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded--foreground-activation .mdc-switch__ripple::after{-webkit-animation:mdc-ripple-fg-radius-in 225ms forwards,mdc-ripple-fg-opacity-in 75ms forwards;animation:mdc-ripple-fg-radius-in 225ms forwards,mdc-ripple-fg-opacity-in 75ms forwards}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded--foreground-deactivation .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded--foreground-deactivation .mdc-switch__ripple::after{-webkit-animation:mdc-ripple-fg-opacity-out 150ms;animation:mdc-ripple-fg-opacity-out 150ms;-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}#cookiescript_injected .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::before{top:calc(50% - 50%);left:calc(50% - 50%);width:100%;height:100%}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before{top:0;left:0;width:0;height:0}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after{width:0;height:0}#cookiescript_injected .mdc-switch,#cookiescript_injected_fsd .mdc-switch{width:36px}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus:not(:active) .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__handle::after{background:#424242}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__handle::after{background:#616161}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after{background:#212121}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus:not(:active) .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus:not(:active) .mdc-switch__handle::after{background:#212121}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__handle::after{background:#212121}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__handle::after{background:#424242}#cookiescript_injected .mdc-switch .mdc-switch__handle::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle::before{background:#fff}#cookiescript_injected .mdc-switch:enabled .mdc-switch__shadow,#cookiescript_injected_fsd .mdc-switch:enabled .mdc-switch__shadow{box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);--mdc-elevation-box-shadow-for-gss:0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0, 0, 0, 0.12)}#cookiescript_injected .mdc-switch:disabled .mdc-switch__shadow,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__shadow{box-shadow:0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12);--mdc-elevation-box-shadow-for-gss:0px 0px 0px 0px rgba(0, 0, 0, 0.2),0px 0px 0px 0px rgba(0, 0, 0, 0.14),0px 0px 0px 0px rgba(0, 0, 0, 0.12)}#cookiescript_injected .mdc-switch .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle{height:20px}#cookiescript_injected .mdc-switch:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__handle::after{opacity:.38}#cookiescript_injected .mdc-switch .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle{border-radius:10px}#cookiescript_injected .mdc-switch .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle{width:20px}#cookiescript_injected .mdc-switch .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle-track{width:calc(100% - 20px)}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons{opacity:.38}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons{opacity:.38}#cookiescript_injected .mdc-switch.mdc-switch--selected .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected .mdc-switch__icon{width:18px;height:18px}#cookiescript_injected .mdc-switch.mdc-switch--unselected .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected .mdc-switch__icon{width:18px;height:18px}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::before{background-color:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::before{background-color:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::before{background-color:}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::before{background-color:#424242}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::before{background-color:#424242}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::before{background-color:#424242}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before{opacity:.04}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before{transition-duration:75ms;opacity:.12}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after{transition:opacity 150ms linear}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after{transition-duration:75ms;opacity:.1}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before{opacity:.04}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before{transition-duration:75ms;opacity:.12}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after{transition:opacity 150ms linear}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after{transition-duration:75ms;opacity:.1}#cookiescript_injected .mdc-switch .mdc-switch__ripple,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple{height:48px;width:48px}#cookiescript_injected .mdc-switch .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch .mdc-switch__track{height:14px}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track{opacity:.12}#cookiescript_injected .mdc-switch:enabled .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:enabled:active .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track::after{background:#424242}#cookiescript_injected .mdc-switch:enabled .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:enabled:active .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled:active .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track::before{background:#424242}#cookiescript_injected .mdc-switch .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch .mdc-switch__track{border-radius:7px}@media screen and (forced-colors:active),(-ms-high-contrast:active){#cookiescript_injected .mdc-switch:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__handle::after{opacity:1}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons{opacity:1}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons{opacity:1}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track{opacity:1}}
+/*End Toggle*/
+
+#cookiescript_injected {
+bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    padding: 12px 60px 12px 50px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    max-height: 85%;
+    overflow-y: auto;
+    align-items: center;
+}
+#cookiescript_toppart,#cookiescript_bottompart {
+	width: 100%;
+}
+#cookiescript_toppart{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    margin: 0;
+}
+#cookiescript_rightpart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	min-width: 33%;
+}
+#cookiescript_copyright {
+    text-align: left;
+    line-height: 1;
+    margin:4px 0 0 0;
+    position: absolute;
+    right: 15px;
+    bottom: 4px;
+}
+
+#cookiescript_buttons {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0;
+    font-weight: 700;
+    width:100%;
+	flex-direction: row;
+}
+
+#cookiescript_manage_wrap {
+    margin: 0 0 3px 0;
+	text-align: left;
+}
+#cookiescript_manage{
+    margin-left:0;
+}
+#cookiescript_header {
+    margin: 0 50px 9px 0;
+    text-align: left;
+    padding: 7px 0 0 0;
+}
+#cookiescript_checkboxs {
+    margin: 0 0 0 -11px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cookiescript_checkbox_label{
+    padding: 0;
+    margin: 0 10px 0 -2px;
+}
+.cookiescript_checkbox {
+    margin: 0;
+}
+#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+    margin: 5px 7px;
+    flex-shrink: 1;
+    padding: 0 17px;
+    flex-grow: 1;
+}
+#cookiescript_description{
+    text-align: left;
+    font-size: 12px;
+    margin: 0;
+}
+#cookiescript_readmore{
+	font-size: 12px;
+}
+#cookiescript_leftpart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 65%;
+}
+
+#cookiescript_injected.hascookiereport #cookiescript_rightpart{
+	align-items:baseline;
+}
+#cookiescript_leftpart{
+	-ms-flex: 0 1 741px;
+}
+#cookiescript_rightpart, {
+	-ms-flex: 0 1 285px;
+}
+#cookiescript_buttons{
+	-ms-flex: 0 1 100%;
+}
+#cookiescript_cookietablewrap {
+    transition: height 300ms 0ms, min-height 300ms 0ms, max-height 300ms 0ms, opacity 200ms 300ms;
+}
+#cookiescript_cookietablewrap.cookiescript_hidden {
+    transition: height 300ms 0ms, min-height 300ms 0ms, max-height 300ms 0ms, opacity 200ms 0ms;
+}
+
+
+@media only screen and (max-width: 1024px){
+    #cookiescript_buttons {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #cookiescript_accept, #cookiescript_reject, #cookiescript_save{
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+	#cookiescript_injected{
+		padding: 15px 20px;
+	}
+	#cookiescript_toppart{
+		flex-direction: column;
+	}
+	#cookiescript_leftpart,#cookiescript_rightpart{
+		width:100%;
+		max-width:100%;
+		margin: 0;
+		-ms-flex:none;
+	}
+	#cookiescript_buttons {
+        flex-wrap: wrap;
+        width:100%;
+		flex-direction: row;
+    }
+    #cookiescript_accept, #cookiescript_reject, #cookiescript_save{
+		flex-grow: 1;
+    }
+    .hascookiereport #cookiescript_toppart{
+    	margin-bottom:10px;
+    }
+    
+}
+@media only screen and (max-width: 414px) {
+    #cookiescript_injected{
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+    #cookiescript_header{
+            margin-right: 25px;
+        }
+    #cookiescript_rightpart{
+        flex-direction: column;
+    }
+
+    #cookiescript_buttons{
+        flex-wrap: wrap;
+    }
+    #cookiescript_copyright {
+        position: static;
+    }
+}
+
+
+#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+	border-radius: 20px;
+}
+/*IE 9 fixes*/
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+	.cookiescript_checkbox{
+		display: inline-block;
+	}
+	#cookiescript_buttons{
+		margin-top:5%;
+	}
+	#cookiescript_leftpart{
+		float:left;
+		width:60%;
+	}
+	#cookiescript_rightpart{
+		float:right;
+		width:38%;
+		margin: 0;
+	}
+	#cookiescript_injected{
+		padding: 15px 20px;
+	}
+	#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+		white-space: normal;
+	}
+	#cookiescript_injected {
+		max-height: 100%;
+	}
+}
+
+
+    </style>
+  <div id="cookiescript_injected_wrapper" tabindex="0" role="alert" aria-live="assertive" data-cs-id="cookiescript_injected">
+  <div id="cookiescript_injected" tabindex="0" role="alert" aria-live="assertive" data-nosnippet="" class="" style="">
+    <div class="cookiescript_pre_header">
+              <div id="cookiescript_close" tabindex="0" role="button" aria-label="Close">×</div>
+    </div>
+  <div id="cookiescript_toppart">
+    <div id="cookiescript_leftpart">
+        <div id="cookiescript_header" data-cs-i18n-text="{&quot;en&quot;:&quot;This website uses cookies&quot;}">
+    This website uses cookies  </div>
+  <div id="cookiescript_description">
+	    <span data-cs-desc-box="true" data-cs-i18n-text="{&quot;en&quot;:&quot;This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our Cookie Policy.&quot;}" data-cs-i18n-read="This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our Cookie Policy.">
+      This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our Cookie Policy.    </span>
+
+    
+      
+      <a id="cookiescript_readmore" data-cs-i18n-text="{&quot;en&quot;:&quot;Read more&quot;}" data-cs-i18n-url="{&quot;en&quot;:&quot;\/cookies.htm&quot;}" href="https://sound-au.com/cookies.htm" target="_blank" aria-label="Read more, opens a new window">
+        Read more      </a>
+
+          </div>
+  <div id="cookiescript_checkboxs">
+          
+            <div class="cookiescript_checkbox">
+        <div class="mdc-checkbox">
+          <input tabindex="0" id="cookiescript_category_strict" data-cookiescript="checkbox-input" type="checkbox" class="mdc-checkbox__native-control cookiescript_checkbox_input" value="strict" disabled="" checked="">
+          <div class="mdc-checkbox__background">
+            <svg role="none" class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+          </div>
+        </div>
+        <label class="cookiescript_checkbox_label" for="cookiescript_category_strict">
+          <span class="cookiescript_checkbox_text" data-cs-i18n-text="{&quot;en&quot;:&quot;Strictly necessary&quot;}">
+            Strictly necessary          </span>
+        </label>
+      </div>
+
+          
+            <div class="cookiescript_checkbox">
+        <div class="mdc-checkbox">
+          <input tabindex="0" id="cookiescript_category_performance" data-cookiescript="checkbox-input" type="checkbox" class="mdc-checkbox__native-control cookiescript_checkbox_input" value="performance">
+          <div class="mdc-checkbox__background">
+            <svg role="none" class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+          </div>
+        </div>
+        <label class="cookiescript_checkbox_label" for="cookiescript_category_performance">
+          <span class="cookiescript_checkbox_text" data-cs-i18n-text="{&quot;en&quot;:&quot;Performance&quot;}">
+            Performance          </span>
+        </label>
+      </div>
+
+          
+            <div class="cookiescript_checkbox">
+        <div class="mdc-checkbox">
+          <input tabindex="0" id="cookiescript_category_targeting" data-cookiescript="checkbox-input" type="checkbox" class="mdc-checkbox__native-control cookiescript_checkbox_input" value="targeting">
+          <div class="mdc-checkbox__background">
+            <svg role="none" class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+          </div>
+        </div>
+        <label class="cookiescript_checkbox_label" for="cookiescript_category_targeting">
+          <span class="cookiescript_checkbox_text" data-cs-i18n-text="{&quot;en&quot;:&quot;Targeting&quot;}">
+            Targeting          </span>
+        </label>
+      </div>
+
+          
+            <div class="cookiescript_checkbox">
+        <div class="mdc-checkbox">
+          <input tabindex="0" id="cookiescript_category_functionality" data-cookiescript="checkbox-input" type="checkbox" class="mdc-checkbox__native-control cookiescript_checkbox_input" value="functionality">
+          <div class="mdc-checkbox__background">
+            <svg role="none" class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+          </div>
+        </div>
+        <label class="cookiescript_checkbox_label" for="cookiescript_category_functionality">
+          <span class="cookiescript_checkbox_text" data-cs-i18n-text="{&quot;en&quot;:&quot;Functionality&quot;}">
+            Functionality          </span>
+        </label>
+      </div>
+
+          
+            <div class="cookiescript_checkbox">
+        <div class="mdc-checkbox">
+          <input tabindex="0" id="cookiescript_category_unclassified" data-cookiescript="checkbox-input" type="checkbox" class="mdc-checkbox__native-control cookiescript_checkbox_input" value="unclassified">
+          <div class="mdc-checkbox__background">
+            <svg role="none" class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+          </div>
+        </div>
+        <label class="cookiescript_checkbox_label" for="cookiescript_category_unclassified">
+          <span class="cookiescript_checkbox_text" data-cs-i18n-text="{&quot;en&quot;:&quot;Unclassified&quot;}">
+            Unclassified          </span>
+        </label>
+      </div>
+
+      </div>
+
+  <div id="cookiescript_manage_wrap" tabindex="0" role="button">
+    <div id="cookiescript_manage">
+      <svg role="none" id="cookiescript_manageicon" viewBox="0 0 9.62 9.57">
+        <g id="cs-manage-btn">
+          <g id="cs-manage-btn-1-2">
+            <path class="cookiescript_gear" d="M9.46,6.06l-1.1-.78c0-.16.06-.31.06-.47a1.27,1.27,0,0,0-.06-.47L9.57,3.4l-1.15-2L7,1.93a2.74,2.74,0,0,0-.83-.47L6,0H3.61L3.35,1.46a7.14,7.14,0,0,0-.79.47L1.15,1.36,0,3.4l1.15.94c0,.16,0,.31,0,.47a1.51,1.51,0,0,0,0,.47l-1,.78A.75.75,0,0,0,0,6.17l1.15,2,1.41-.58a2.49,2.49,0,0,0,.84.47l.21,1.47H6a.53.53,0,0,1,0-.21L6.22,8.1a4,4,0,0,0,.84-.47l1.41.58,1.15-2A.75.75,0,0,0,9.46,6.06Zm-4.65.19A1.47,1.47,0,1,1,6.28,4.78,1.47,1.47,0,0,1,4.81,6.25Z"></path>
+          </g>
+        </g>
+      </svg>
+      <span data-cs-show-title="cookie-script" data-cs-i18n-text="{&quot;en&quot;:&quot;Show details&quot;}">
+        Show details      </span>
+      <span style="display: none" data-cs-hide-title="cookie-script" data-cs-i18n-text="{&quot;en&quot;:&quot;Hide details&quot;}">
+        Hide details      </span>
+    </div>
+  </div>
+    </div>
+    <div id="cookiescript_rightpart">
+        <div id="cookiescript_buttons">
+          <div id="cookiescript_save" tabindex="0" role="button" data-cs-i18n-text="{&quot;en&quot;:&quot;Save &amp; Close&quot;}">
+        Save &amp; Close      </div>
+              <div id="cookiescript_accept" tabindex="0" role="button" data-cs-i18n-text="{&quot;en&quot;:&quot;Accept all&quot;}">
+        Accept all      </div>
+              <div id="cookiescript_reject" tabindex="0" role="button" data-cs-i18n-text="{&quot;en&quot;:&quot;Decline all&quot;}">
+        Decline all      </div>
+      </div>
+    </div>
+  </div>
+  <div id="cookiescript_bottompart">
+        <div class="cookiescript_hidden" id="cookiescript_cookietablewrap">
+          </div>
+        
+  </div>
+  </div>
+</div>
+
+</body></html>

@@ -1,7 +1,0 @@
-﻿i files che iniziano con A e B fanno parte di due set diversi di test
-A piezo su chitarra classica
-B chitarra elettrica, collegata direttamente, senza piezo
-
-i nomi "oldstone" e "seagull" si riferiscono a due schemi di amplificatore, trovi gli schemi in .jpg qui nella cartella
-
-cmq alla fine il migliore è il seagull con TL082 in entrambe le applicazioni
