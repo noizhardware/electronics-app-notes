@@ -5,6 +5,7 @@
 - DC coupled
 
 - ESP 249 still to try, compare w/ seagull
+- appnote here also worth a try? `/media/nff/RED/Work/electronics/datasheet/_components/opa167x.pdf`
 
 ---
 
