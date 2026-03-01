@@ -1,4 +1,6 @@
-﻿TL;DR 2025j20-1708
+﻿TL;DR 2026b28-1054
+- see schematic >(2.9.1) / (2.9.1A)
+- used in `/media/nff/HOTdata/EAGLE/BRD/ACTIVE/MTX_in1098765sg_00` >(2.9.1A)
 - seagull w/ 1M pulldown, recommended 2x row gain is ok w/ piezo, eguit, line/eurorack
 - use OPA1677/8/9 for general use
 - use TL08x specific for guitar, maybe sounds better
